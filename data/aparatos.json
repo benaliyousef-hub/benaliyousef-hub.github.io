@@ -1,0 +1,662 @@
+[
+  {
+    "slug": "aire-acondicionado", "art": "un", "nombre": "aire acondicionado", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 600, "wTyp": 1000, "wMax": 2000, "factor": 0.6, "horas": 6, "dias": 90, "fecha": "2026-11-12",
+    "compra": "aire acondicionado split inverter",
+    "intro": "Un split doméstico para un salón o un dormitorio suele pedir entre 600 y 2.000 W eléctricos. Los modelos inverter no trabajan siempre al máximo: una vez alcanzada la temperatura bajan de régimen, y por eso el consumo real es bastante menor que la potencia de la etiqueta.",
+    "factores": [
+      "La temperatura que marques: cada grado de menos en verano sube el consumo en torno a un 8 %.",
+      "El aislamiento y la orientación de la habitación, que deciden cuánto tiempo trabaja el compresor.",
+      "Que sea inverter o no: los equipos antiguos de arranque y parada gastan claramente más."
+    ],
+    "consejos": [
+      "Ponlo a 25 o 26 °C en verano y deja que mantenga la temperatura en lugar de apagarlo y encenderlo.",
+      "Baja persianas y toldos en las horas de sol: es la forma más barata de quitarle trabajo.",
+      "Limpia los filtros al empezar la temporada; un filtro sucio obliga al equipo a trabajar más."
+    ],
+    "faq": [
+      { "q": "¿Gasta más el aire acondicionado en frío o en calor?", "a": "Depende del salto de temperatura con el exterior. En calor, una bomba de calor sigue siendo mucho más eficiente que un calefactor o un radiador eléctrico, porque mueve calor en lugar de generarlo con una resistencia." },
+      { "q": "¿Es mejor dejar el aire encendido o apagarlo al salir?", "a": "Si sales más de una hora, apágalo. Mantener fría una casa vacía gasta más que volver a enfriarla al regresar, sobre todo con un equipo inverter." }
+    ]
+  },
+  {
+    "slug": "calefactor", "art": "un", "nombre": "calefactor", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 1000, "wTyp": 2000, "wMax": 2500, "factor": 0.8, "horas": 3, "dias": 120, "fecha": "2026-11-12",
+    "compra": "calefactor bajo consumo con termostato",
+    "intro": "Un calefactor de aire es de los aparatos que más potencia piden en casa: lo normal son 2.000 W, lo mismo que veinte televisores encendidos a la vez. Calienta rápido, pero cada hora de uso se nota en la factura.",
+    "factores": [
+      "La posición de potencia: casi todos tienen dos niveles, normalmente 1.000 y 2.000 W.",
+      "Si tiene termostato, que lo apaga al llegar a la temperatura, o funciona sin parar.",
+      "El tamaño de la habitación y cuánto calor se escapa por puertas y ventanas."
+    ],
+    "consejos": [
+      "Úsalo para calentar ratos cortos y espacios pequeños, como el baño, no para toda la casa.",
+      "Elige un modelo con termostato y temporizador para que no funcione más de lo necesario.",
+      "Si lo usas varias horas al día, compara con una bomba de calor: da el mismo calor con mucha menos electricidad."
+    ],
+    "faq": [
+      { "q": "¿Existen calefactores de bajo consumo?", "a": "No en sentido estricto. Todos los calefactores de resistencia convierten prácticamente toda la electricidad en calor, así que uno de 2.000 W gasta lo mismo sea de la marca que sea. Lo que cambia el gasto es la potencia elegida y el tiempo que está encendido." },
+      { "q": "¿Qué gasta más, un calefactor o un radiador de aceite?", "a": "A igualdad de potencia y de horas, lo mismo. El radiador de aceite tarda más en calentar y sigue dando calor un rato después de apagarse; el calefactor calienta al momento pero se enfría enseguida." }
+    ]
+  },
+  {
+    "slug": "radiador-de-aceite", "art": "un", "nombre": "radiador de aceite", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 1000, "wTyp": 1500, "wMax": 2500, "factor": 0.6, "horas": 5, "dias": 120, "fecha": "2026-11-12",
+    "compra": "radiador de aceite con termostato",
+    "intro": "Un radiador de aceite tiene entre 1.000 y 2.500 W según el número de elementos. Su termostato enciende y apaga la resistencia para mantener la temperatura, de modo que en una habitación ya caliente solo trabaja una parte del tiempo.",
+    "factores": [
+      "El número de elementos y la potencia seleccionada en el mando.",
+      "La temperatura que fijes en el termostato y lo fría que esté la estancia.",
+      "Las horas seguidas de uso: cuanto más tiempo, más pesa el aislamiento de la habitación."
+    ],
+    "consejos": [
+      "Cierra la puerta de la habitación: calentar solo el espacio que usas es el mayor ahorro.",
+      "Usa la potencia baja para mantener la temperatura una vez caldeada la estancia.",
+      "No lo tapes con ropa: además de peligroso, impide que el termostato funcione bien."
+    ],
+    "faq": [
+      { "q": "¿Es caro dejar un radiador de aceite toda la noche?", "a": "Puede serlo. Ocho horas con un modelo de 1.500 W que trabaje al 60 % son más de 7 kWh. Para dormir suele bastar con calentar la habitación antes y dejar el termostato en una posición baja." },
+      { "q": "¿Gasta menos que un emisor térmico?", "a": "A la misma potencia y con el mismo termostato, el consumo es prácticamente igual. La diferencia está en la inercia y en la precisión del programador, no en la eficiencia." }
+    ]
+  },
+  {
+    "slug": "ventilador", "art": "un", "nombre": "ventilador", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 30, "wTyp": 50, "wMax": 100, "factor": 1, "horas": 8, "dias": 100, "fecha": "2026-11-12",
+    "compra": "ventilador silencioso bajo consumo",
+    "intro": "Un ventilador de pie o de sobremesa consume entre 30 y 100 W, unas veinte veces menos que un aire acondicionado. No baja la temperatura de la habitación, pero la sensación de frescor que da el aire en movimiento sale muy barata.",
+    "factores": [
+      "La velocidad: a máxima potencia puede gastar el doble que en la posición más baja.",
+      "El tamaño de las aspas y el tipo de motor; los de corriente continua gastan menos.",
+      "Las horas de uso, que en las noches de verano pueden ser muchas."
+    ],
+    "consejos": [
+      "Apágalo cuando salgas de la habitación: refresca a las personas, no el aire.",
+      "Combínalo con el aire acondicionado para poder subir un par de grados el termostato.",
+      "De noche, usa el temporizador para que se apague cuando ya refresca."
+    ],
+    "faq": [
+      { "q": "¿Sale caro dormir con el ventilador encendido?", "a": "No. Ocho horas con un ventilador de 50 W son 0,4 kWh, unos pocos céntimos por noche. Es de los aparatos de climatización más baratos de usar." },
+      { "q": "¿Gasta más un ventilador de techo o uno de pie?", "a": "Consumen cifras parecidas, entre 15 y 75 W según la velocidad. Los de techo con motor de corriente continua suelen ser los más eficientes." }
+    ]
+  },
+  {
+    "slug": "deshumidificador", "art": "un", "nombre": "deshumidificador", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 200, "wTyp": 350, "wMax": 700, "factor": 0.7, "horas": 8, "dias": 150, "fecha": "2026-11-12",
+    "compra": "deshumidificador bajo consumo",
+    "intro": "Un deshumidificador de compresor para casa consume entre 200 y 700 W según los litros que extrae al día. Lleva un sensor de humedad que para el compresor al llegar al nivel marcado, así que no trabaja todas las horas que está enchufado.",
+    "factores": [
+      "La capacidad del equipo, medida en litros de agua extraídos al día.",
+      "La humedad de la casa y el nivel que le pidas: bajar del 50 % cuesta mucho más.",
+      "La temperatura: en estancias frías los modelos de compresor rinden peor."
+    ],
+    "consejos": [
+      "Fija el humidistato entre el 50 y el 60 %; por debajo apenas se nota y el gasto se dispara.",
+      "Cierra puertas y ventanas mientras funciona para no secar el aire de la calle.",
+      "Vacía el depósito y limpia el filtro a menudo para que no pierda rendimiento."
+    ],
+    "faq": [
+      { "q": "¿Sirve un deshumidificador para secar la ropa?", "a": "Sí, y suele gastar menos que una secadora de condensación, aunque tarda más. Funciona mejor en una habitación pequeña y cerrada con la ropa bien tendida." },
+      { "q": "¿Cuántas horas al día hay que tenerlo encendido?", "a": "Las que marque el humidistato. Lo habitual es dejarlo en automático: al principio trabaja muchas horas y después solo arranca cuando la humedad vuelve a subir." }
+    ]
+  },
+  {
+    "slug": "termo-electrico", "art": "un", "nombre": "termo eléctrico", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 1200, "wTyp": 1500, "wMax": 2200, "factor": 1, "horas": 3, "dias": 365, "fecha": "2026-11-12",
+    "compra": "termo eléctrico clase A programable",
+    "intro": "El termo eléctrico suele ser el aparato que más electricidad gasta en una casa sin gas. Su resistencia de 1.200 a 2.200 W no está siempre encendida: trabaja unas horas al día, las necesarias para calentar el agua que se gasta y compensar el calor que pierde el depósito.",
+    "factores": [
+      "Cuánta agua caliente se usa: el número de personas y la duración de las duchas.",
+      "La temperatura del termostato; cuanto más alta, más pérdidas tiene el depósito.",
+      "El aislamiento y la ubicación del termo: en una galería fría pierde más calor."
+    ],
+    "consejos": [
+      "Ajusta el termostato en torno a 55 o 60 °C: suficiente para la higiene del agua sin derrochar.",
+      "Con una tarifa con horas baratas, un programador para que caliente en esas horas reduce la factura.",
+      "Si te vas varios días, apágalo; para ausencias de unas horas no compensa."
+    ],
+    "faq": [
+      { "q": "¿Es mejor apagar el termo por la noche?", "a": "El ahorro es pequeño, porque un termo bien aislado pierde poco calor en unas horas. Compensa más programarlo para que caliente en las horas baratas de tu tarifa o apagarlo en ausencias largas." },
+      { "q": "¿Cuánto gasta el termo por cada ducha?", "a": "Una ducha de cinco minutos gasta unos 40 litros de agua templada, que necesitan entre 1 y 1,5 kWh para calentarse. La cifra sube rápido con duchas largas o caudales altos." }
+    ]
+  },
+  {
+    "slug": "manta-electrica", "art": "una", "nombre": "manta eléctrica", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 50, "wTyp": 100, "wMax": 150, "factor": 0.5, "horas": 4, "dias": 120, "fecha": "2026-11-12",
+    "compra": "manta eléctrica con temporizador",
+    "intro": "Una manta eléctrica consume entre 50 y 150 W, una fracción de lo que pide cualquier calefacción. Calienta a la persona y no el aire de la habitación, por eso es una de las formas más baratas de combatir el frío.",
+    "factores": [
+      "El nivel de calor elegido: en las posiciones bajas la resistencia trabaja a ratos.",
+      "El tamaño: un calientacamas doble consume más que una manta individual.",
+      "Las horas de uso y si tiene apagado automático."
+    ],
+    "consejos": [
+      "Úsala para precalentar la cama y bájala al mínimo o apágala al acostarte.",
+      "En el sofá, te permite bajar la calefacción un par de grados sin pasar frío.",
+      "Elige un modelo con temporizador de apagado: ahorra y es más seguro."
+    ],
+    "faq": [
+      { "q": "¿Gasta mucho una manta eléctrica toda la noche?", "a": "Muy poco. Ocho horas a nivel medio son alrededor de 0,4 kWh, unos céntimos. Aun así, por seguridad y comodidad es mejor usar el temporizador." },
+      { "q": "¿Compensa frente a encender la calefacción?", "a": "Si lo que quieres es estar caliente tú y no toda la casa, sí: consume unas veinte veces menos que un calefactor de 2.000 W." }
+    ]
+  },
+  {
+    "slug": "frigorifico", "art": "un", "nombre": "frigorífico", "cat": "cocina", "modo": "potencia",
+    "wMin": 100, "wTyp": 150, "wMax": 250, "factor": 0.2, "horas": 24, "dias": 365, "fecha": "2026-11-12",
+    "compra": "frigorífico combi clase A",
+    "intro": "El frigorífico tiene poca potencia, entre 100 y 250 W, pero está enchufado las 24 horas de los 365 días. Su compresor solo funciona una parte del tiempo, y aun así es uno de los electrodomésticos que más suma al cabo del año.",
+    "factores": [
+      "La clase energética y la antigüedad: uno moderno eficiente puede gastar menos de la mitad que uno de hace quince años.",
+      "La temperatura de la cocina y la ventilación de la parte trasera.",
+      "Cuántas veces se abre la puerta y la temperatura a la que está regulado."
+    ],
+    "consejos": [
+      "Regúlalo a unos 4 o 5 °C en la nevera y a -18 °C en el congelador; más frío es gasto inútil.",
+      "Deja unos centímetros libres detrás y encima para que disipe bien el calor.",
+      "No metas comida caliente y revisa que las gomas de la puerta cierran bien."
+    ],
+    "faq": [
+      { "q": "¿Cuántos kWh gasta un frigorífico al año?", "a": "Según el modelo, entre poco más de 100 kWh en los combis más eficientes y más de 400 kWh en los antiguos o muy grandes. El dato exacto de tu modelo figura en la etiqueta energética como kWh al año." },
+      { "q": "¿Compensa cambiar un frigorífico viejo por uno eficiente?", "a": "Si tiene más de quince años, a menudo sí: el ahorro puede superar los 200 kWh anuales. Haz la cuenta con el consumo de la etiqueta del nuevo y el precio de tu luz antes de decidir." }
+    ]
+  },
+  {
+    "slug": "congelador", "art": "un", "nombre": "congelador", "cat": "cocina", "modo": "potencia",
+    "wMin": 80, "wTyp": 120, "wMax": 200, "factor": 0.25, "horas": 24, "dias": 365, "fecha": "2026-11-12",
+    "compra": "congelador vertical no frost clase A",
+    "intro": "Un congelador independiente, vertical o arcón, consume de forma parecida a un frigorífico: poca potencia, pero todo el año. Los arcones suelen gastar algo menos porque el frío no se escapa al abrir la tapa.",
+    "factores": [
+      "El tipo: los arcones pierden menos frío que los verticales al abrirlos.",
+      "La escarcha acumulada, que actúa de aislante y obliga al compresor a trabajar más.",
+      "Dónde está instalado: en un garaje caluroso en verano el consumo sube."
+    ],
+    "consejos": [
+      "Mantenlo a -18 °C: cada grado de más frío aumenta el consumo sin beneficio.",
+      "Descongélalo cuando la capa de hielo pase de unos pocos milímetros, si no es no frost.",
+      "Tenlo razonablemente lleno; los alimentos congelados ayudan a conservar el frío."
+    ],
+    "faq": [
+      { "q": "¿Gasta más un congelador vacío que lleno?", "a": "Sí, algo más. Con el congelador lleno hay menos aire que enfriar cada vez que se abre y la temperatura se mantiene estable más tiempo." },
+      { "q": "¿Se puede tener un congelador en el garaje o el trastero?", "a": "Sí, si el fabricante lo permite para la temperatura del lugar. Cada modelo tiene una clase climática que indica entre qué temperaturas ambiente funciona bien." }
+    ]
+  },
+  {
+    "slug": "horno", "art": "un", "nombre": "horno", "cat": "cocina", "modo": "ciclo",
+    "kwhMin": 0.7, "kwhTyp": 1.0, "kwhMax": 1.6, "usos": 3, "dias": 365, "fecha": "2026-11-12",
+    "compra": "horno multifunción clase A+",
+    "intro": "Un horno eléctrico tiene entre 2.000 y 3.500 W de potencia, pero no los consume de continuo: tras el precalentado, la resistencia se enciende y se apaga para mantener la temperatura. Un uso normal de una hora ronda 1 kWh.",
+    "factores": [
+      "La temperatura y la duración de la receta.",
+      "El precalentado, que es el momento de mayor consumo.",
+      "Cuántas veces abres la puerta: cada apertura deja escapar buena parte del calor."
+    ],
+    "consejos": [
+      "Aprovecha el horno encendido para cocinar varias cosas seguidas o a la vez.",
+      "Apágalo unos minutos antes de terminar: el calor residual acaba la cocción.",
+      "Usa el ventilador cuando la receta lo permita; cocina a menor temperatura y más rápido."
+    ],
+    "faq": [
+      { "q": "¿Gasta menos una freidora de aire que el horno?", "a": "Para raciones pequeñas, sí: calienta un espacio mucho menor y tarda menos, así que suele gastar menos de la mitad. Para bandejas grandes el horno sigue siendo más práctico." },
+      { "q": "¿Cuánto gasta la limpieza por pirólisis?", "a": "Un ciclo de pirólisis consume entre 3 y 5 kWh, porque mantiene el horno a unos 500 °C durante más de una hora. Conviene reservarlo para cuando esté realmente sucio." }
+    ]
+  },
+  {
+    "slug": "microondas", "art": "un", "nombre": "microondas", "cat": "cocina", "modo": "potencia",
+    "wMin": 800, "wTyp": 1200, "wMax": 1500, "factor": 1, "horas": 0.17, "dias": 365, "fecha": "2026-11-12",
+    "compra": "microondas con grill eficiente",
+    "intro": "Un microondas de 800 W de potencia de cocción toma de la red unos 1.200 W, porque parte de la energía se pierde al generar las microondas. Como se usa pocos minutos cada vez, su gasto anual es bajo.",
+    "factores": [
+      "El nivel de potencia elegido y los minutos de uso al día.",
+      "Si usas el grill, que añade una resistencia de unos 1.000 W.",
+      "El reloj y la pantalla, que consumen un poco las 24 horas."
+    ],
+    "consejos": [
+      "Para calentar un vaso de agua o un plato, gasta menos que la placa o el horno.",
+      "Tapa los alimentos: se calientan antes y de forma más uniforme.",
+      "Descongela en la nevera con antelación en vez de usar el modo descongelar."
+    ],
+    "faq": [
+      { "q": "¿Gasta menos el microondas que la vitrocerámica?", "a": "Para cantidades pequeñas, sí. El microondas calienta directamente el alimento y lo hace en muy poco tiempo, mientras que la placa tiene que calentar primero la zona de cocción y el recipiente." },
+      { "q": "¿Consume el microondas cuando está apagado?", "a": "Un poco, por el reloj: en torno a 1 W, que al cabo del año son unos 9 kWh. Es poco, pero en modelos que se usan apenas unos minutos puede ser una parte apreciable de su consumo total." }
+    ]
+  },
+  {
+    "slug": "vitroceramica", "art": "una", "nombre": "vitrocerámica", "cat": "cocina", "modo": "potencia",
+    "wMin": 1200, "wTyp": 1800, "wMax": 2300, "factor": 0.6, "horas": 1, "dias": 365, "fecha": "2026-11-12",
+    "compra": "batería de cocina fondo difusor vitrocerámica",
+    "intro": "Cada zona de una vitrocerámica tiene entre 1.200 y 2.300 W. Salvo al máximo, la resistencia trabaja a intervalos, y además sigue caliente varios minutos después de apagarla, un calor que se puede aprovechar.",
+    "factores": [
+      "Cuántos fuegos usas a la vez y a qué nivel.",
+      "El tamaño y el fondo del recipiente: si es menor que la zona o no apoya plano, se pierde calor.",
+      "Cocinar con o sin tapa."
+    ],
+    "consejos": [
+      "Apaga el fuego unos minutos antes y termina con el calor residual.",
+      "Usa siempre tapa: sin ella se escapa buena parte del calor y la cocción se alarga.",
+      "Elige recipientes de fondo plano y del tamaño de la zona de cocción."
+    ],
+    "faq": [
+      { "q": "¿Gasta más la vitrocerámica o la inducción?", "a": "La vitrocerámica. La inducción calienta directamente el recipiente y pierde menos calor por el camino, de modo que para cocinar lo mismo suele gastar entre un 20 y un 30 % menos." },
+      { "q": "¿Cuánta potencia necesita si enciendo todos los fuegos?", "a": "Una placa de cuatro zonas puede superar los 6.000 W con todo al máximo. En la práctica rara vez ocurre, pero conviene tenerlo en cuenta al elegir la potencia contratada." }
+    ]
+  },
+  {
+    "slug": "placa-de-induccion", "art": "una", "nombre": "placa de inducción", "cat": "cocina", "modo": "potencia",
+    "wMin": 1400, "wTyp": 2000, "wMax": 3000, "factor": 0.5, "horas": 1, "dias": 365, "fecha": "2026-11-12",
+    "compra": "placa de inducción 3 zonas",
+    "intro": "Una zona de inducción tiene entre 1.400 y 3.000 W, pero calienta tan deprisa que trabaja menos tiempo que una vitrocerámica. El calor se genera en el propio recipiente, así que casi nada se desperdicia en el cristal.",
+    "factores": [
+      "El nivel de potencia y el tiempo de cocción.",
+      "El uso de la función de potencia extra, pensada para hervir agua rápido.",
+      "La calidad del fondo del recipiente, que debe ser ferromagnético y plano."
+    ],
+    "consejos": [
+      "Baja la potencia en cuanto rompa a hervir: mantener el hervor necesita muy poca energía.",
+      "Cocina con tapa y con la cantidad de agua justa.",
+      "Ajusta el recipiente a la zona; la inducción solo calienta donde hay contacto."
+    ],
+    "faq": [
+      { "q": "¿La inducción gasta más luz porque tiene más potencia?", "a": "No. Tiene más potencia punta, pero termina antes y desperdicia menos calor, así que el consumo en kWh por comida suele ser menor que con vitrocerámica." },
+      { "q": "¿Necesito subir la potencia contratada con una placa de inducción?", "a": "No necesariamente. Muchas placas permiten limitar la potencia máxima total desde el menú de instalación para adaptarla a tu contrato." }
+    ]
+  },
+  {
+    "slug": "freidora-de-aire", "art": "una", "nombre": "freidora de aire", "cat": "cocina", "modo": "potencia",
+    "wMin": 1000, "wTyp": 1500, "wMax": 2000, "factor": 0.7, "horas": 0.5, "dias": 365, "fecha": "2026-11-12",
+    "compra": "freidora de aire 5 litros",
+    "intro": "Una freidora de aire consume entre 1.000 y 2.000 W, una potencia similar a la de un horno pequeño. Su ventaja es que calienta una cubeta de pocos litros, casi sin precalentado, y por eso cocina en menos tiempo y con menos kWh.",
+    "factores": [
+      "La capacidad de la cubeta y la potencia del modelo.",
+      "El tiempo y la temperatura de cada receta.",
+      "Llenarla demasiado, que alarga la cocción y obliga a hacer varias tandas."
+    ],
+    "consejos": [
+      "Úsala en lugar del horno para una o dos raciones; para una bandeja familiar no compensa.",
+      "No precalientes más de dos o tres minutos, la mayoría de recetas no lo necesita.",
+      "Agita o da la vuelta a los alimentos a mitad de cocción para no tener que alargar el tiempo."
+    ],
+    "faq": [
+      { "q": "¿Cuánto cuesta usar la freidora de aire media hora?", "a": "Con un modelo de 1.500 W que trabaje al 70 % son unos 0,5 kWh. Multiplícalo por tu precio de la luz para saber el coste exacto de cada uso." },
+      { "q": "¿De verdad ahorra frente al horno?", "a": "En raciones pequeñas, sí: tarda menos y calienta mucho menos volumen. El ahorro por uso es de céntimos, así que se nota sobre todo si la usas a diario." }
+    ]
+  },
+  {
+    "slug": "lavavajillas", "art": "un", "nombre": "lavavajillas", "cat": "cocina", "modo": "ciclo",
+    "kwhMin": 0.6, "kwhTyp": 1.0, "kwhMax": 1.5, "usos": 5, "dias": 365, "fecha": "2026-11-12",
+    "compra": "lavavajillas clase A 60 cm",
+    "intro": "Un lavavajillas gasta entre 0,6 y 1,5 kWh por lavado. Casi toda esa energía se va en calentar el agua, por eso el programa elegido importa más que la marca o el tamaño.",
+    "factores": [
+      "El programa: el eco calienta menos el agua y gasta menos, aunque dure más.",
+      "La temperatura de lavado y el secado con calor.",
+      "La clase energética del modelo, que indica los kWh por cada 100 ciclos eco."
+    ],
+    "consejos": [
+      "Usa el programa eco por defecto: dura más, pero es el que menos electricidad consume.",
+      "Ponlo solo cuando esté lleno y no enjuagues los platos antes con agua caliente.",
+      "Abre la puerta al terminar para que la vajilla se seque con el aire."
+    ],
+    "faq": [
+      { "q": "¿Gasta menos el lavavajillas que lavar a mano?", "a": "Con el lavavajillas lleno y en programa eco, normalmente sí: usa unos 10 litros de agua por ciclo, bastante menos que lavar la misma vajilla a mano con agua caliente." },
+      { "q": "¿Por qué el programa eco dura tanto si gasta menos?", "a": "Porque lava a menor temperatura y compensa con más tiempo de remojo. Lo que consume electricidad es calentar el agua, no mover la bomba durante más minutos." }
+    ]
+  },
+  {
+    "slug": "cafetera-de-capsulas", "art": "una", "nombre": "cafetera de cápsulas", "cat": "cocina", "modo": "potencia",
+    "wMin": 1000, "wTyp": 1300, "wMax": 1500, "factor": 1, "horas": 0.05, "dias": 365, "fecha": "2026-11-12",
+    "compra": "cafetera de cápsulas con apagado automático",
+    "intro": "Una cafetera de cápsulas tiene mucha potencia, entre 1.000 y 1.500 W, pero solo la usa el minuto que tarda en calentar el agua y hacer el café. Su consumo eléctrico es de los más bajos de la cocina.",
+    "factores": [
+      "El número de cafés al día.",
+      "Si se queda encendida manteniendo el agua caliente entre un café y otro.",
+      "El tiempo que tarda en apagarse sola."
+    ],
+    "consejos": [
+      "Comprueba que el apagado automático está activado y en el tiempo más corto.",
+      "Haz los cafés seguidos para aprovechar el calentamiento.",
+      "Descalcifícala cuando lo pida: con cal tarda más en calentar."
+    ],
+    "faq": [
+      { "q": "¿Cuánta electricidad gasta cada café?", "a": "Entre 0,02 y 0,03 kWh, menos de un céntimo. En una cafetera de cápsulas, lo caro es la cápsula, no la luz." },
+      { "q": "¿Gasta más una cafetera de goteo con placa calefactora?", "a": "Puede gastar más si se deja la jarra caliente durante horas. Hacer el café consume poco, pero la placa encendida suma de forma continua." }
+    ]
+  },
+  {
+    "slug": "hervidor-de-agua", "art": "un", "nombre": "hervidor de agua", "cat": "cocina", "modo": "potencia",
+    "wMin": 1500, "wTyp": 2200, "wMax": 3000, "factor": 1, "horas": 0.1, "dias": 365, "fecha": "2026-11-12",
+    "compra": "hervidor de agua con selector de temperatura",
+    "intro": "Un hervidor eléctrico tiene entre 1.500 y 3.000 W y es la forma más eficiente de calentar agua en casa: casi toda la electricidad va directa al agua. Hervir un litro requiere alrededor de 0,1 kWh.",
+    "factores": [
+      "La cantidad de agua que calientas cada vez.",
+      "Cuántas veces lo usas al día.",
+      "La cal acumulada en la resistencia, que alarga el tiempo de hervido."
+    ],
+    "consejos": [
+      "Calienta solo el agua que vayas a usar: hervir el hervidor lleno para una sola taza multiplica el gasto.",
+      "Si tiene selector, usa 80 °C para infusiones que no necesitan agua hirviendo.",
+      "Quita la cal de vez en cuando con vinagre o ácido cítrico."
+    ],
+    "faq": [
+      { "q": "¿Es más barato hervir agua en el hervidor que en la vitrocerámica?", "a": "Sí. El hervidor aprovecha casi toda la energía, mientras que en una vitrocerámica una parte importante se pierde calentando la placa, el recipiente y el aire." },
+      { "q": "¿Un hervidor de más potencia gasta más?", "a": "No para la misma cantidad de agua. Uno de 3.000 W consume más por segundo pero termina antes, así que los kWh por litro son prácticamente los mismos." }
+    ]
+  },
+  {
+    "slug": "tostadora", "art": "una", "nombre": "tostadora", "cat": "cocina", "modo": "potencia",
+    "wMin": 700, "wTyp": 900, "wMax": 1500, "factor": 1, "horas": 0.08, "dias": 365, "fecha": "2026-11-12",
+    "compra": "tostadora 2 ranuras",
+    "intro": "Una tostadora consume entre 700 y 1.500 W durante los dos o tres minutos que tarda cada tanda. Usada a diario, apenas llega a unos pocos kWh en todo el año.",
+    "factores": [
+      "El número de tandas al día y el nivel de tostado.",
+      "El tamaño: las de cuatro ranuras o ranura larga tienen más potencia.",
+      "Usarla para una sola rebanada en modelos que calientan todas las ranuras."
+    ],
+    "consejos": [
+      "Tuesta las rebanadas seguidas: la segunda tanda aprovecha el calor de la primera.",
+      "No uses el horno o el grill para tostar pan; gastan varias veces más.",
+      "Vacía la bandeja de migas para que caliente de forma uniforme."
+    ],
+    "faq": [
+      { "q": "¿Cuánto cuesta hacer unas tostadas?", "a": "Una tanda de tres minutos con una tostadora de 900 W son unos 0,045 kWh: menos de un céntimo." },
+      { "q": "¿Gasta menos una sartén que la tostadora?", "a": "No. Calentar una zona de la placa y la sartén para dos rebanadas consume más que la tostadora, que concentra el calor en el pan." }
+    ]
+  },
+  {
+    "slug": "lavadora", "art": "una", "nombre": "lavadora", "cat": "limpieza", "modo": "ciclo",
+    "kwhMin": 0.4, "kwhTyp": 0.7, "kwhMax": 1.3, "usos": 4, "dias": 365, "fecha": "2026-11-12",
+    "compra": "lavadora clase A 8 kg",
+    "intro": "Una lavadora gasta entre 0,4 y 1,3 kWh por lavado. La mayor parte de esa energía se dedica a calentar el agua: el motor que mueve el tambor consume mucho menos que la resistencia.",
+    "factores": [
+      "La temperatura del programa: es, con diferencia, lo que más influye.",
+      "La clase energética, que indica los kWh por cada 100 ciclos eco.",
+      "La carga y la duración del programa elegido."
+    ],
+    "consejos": [
+      "Lava a 30 °C o en frío siempre que puedas: gasta menos de la mitad que a 60 °C.",
+      "Llena el tambor sin apelmazar la ropa; dos medias cargas gastan más que una completa.",
+      "Centrifuga bien si después usas secadora: sacar agua girando es mucho más barato que evaporarla."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una lavadora en agua fría?", "a": "Muy poco: entre 0,2 y 0,3 kWh por ciclo, porque solo consume el motor y la electrónica. Los detergentes actuales están pensados para lavar bien a baja temperatura." },
+      { "q": "¿A qué hora es más barato poner la lavadora?", "a": "Depende de tu tarifa. Si tienes discriminación horaria, en las horas valle; si pagas un precio fijo todo el día, la hora no cambia el coste." }
+    ]
+  },
+  {
+    "slug": "secadora", "art": "una", "nombre": "secadora", "cat": "limpieza", "modo": "ciclo",
+    "kwhMin": 1.2, "kwhTyp": 2.5, "kwhMax": 4.5, "usos": 3, "dias": 365, "fecha": "2026-11-12",
+    "compra": "secadora bomba de calor clase A",
+    "intro": "La secadora es de los electrodomésticos que más gastan por uso: entre 1,2 kWh en los modelos de bomba de calor y más de 4 kWh en los de condensación o evacuación. La tecnología importa más que en ningún otro aparato.",
+    "factores": [
+      "El tipo: una de bomba de calor consume menos de la mitad que una de condensación.",
+      "La humedad con la que entra la ropa, que depende del centrifugado de la lavadora.",
+      "La carga y el nivel de secado seleccionado."
+    ],
+    "consejos": [
+      "Centrifuga a 1.200 revoluciones o más antes de secar: acorta mucho el ciclo.",
+      "Limpia el filtro de pelusas después de cada uso.",
+      "Usa los programas con sensor de humedad en lugar de los de tiempo fijo."
+    ],
+    "faq": [
+      { "q": "¿Compensa una secadora de bomba de calor?", "a": "Si la usas varias veces por semana, casi siempre. Cuesta más al comprarla, pero cada ciclo gasta en torno a la mitad o menos, y esa diferencia se acumula durante toda su vida útil." },
+      { "q": "¿Cuánto gasta la secadora cada vez que se pone?", "a": "Entre 1,2 y 4,5 kWh según la tecnología y la carga. Multiplica esa cifra por tu precio del kWh para saber el coste de cada secado." }
+    ]
+  },
+  {
+    "slug": "plancha", "art": "una", "nombre": "plancha", "cat": "limpieza", "modo": "potencia",
+    "wMin": 1500, "wTyp": 2400, "wMax": 3000, "factor": 0.5, "horas": 0.3, "dias": 365, "fecha": "2026-11-12",
+    "compra": "plancha de vapor apagado automático",
+    "intro": "Una plancha de vapor tiene entre 1.500 y 3.000 W, pero su termostato corta la resistencia en cuanto la suela alcanza la temperatura. Durante una sesión de planchado está calentando aproximadamente la mitad del tiempo.",
+    "factores": [
+      "La temperatura y la cantidad de vapor que uses.",
+      "Las horas de plancha a la semana.",
+      "Si es un centro de planchado, que además mantiene una caldera caliente."
+    ],
+    "consejos": [
+      "Plancha toda la ropa de una vez en lugar de encenderla para una prenda.",
+      "Empieza por los tejidos delicados y termina con los que necesitan más calor.",
+      "Tiende la ropa bien estirada: menos arrugas son menos minutos de plancha."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una hora de plancha?", "a": "Con un modelo de 2.400 W que caliente la mitad del tiempo, alrededor de 1,2 kWh. Usando mucho vapor la cifra sube." },
+      { "q": "¿Gasta más un centro de planchado?", "a": "Suele gastar algo más por hora, porque mantiene la caldera a presión, pero plancha más rápido. Si planchas mucha ropa de una vez, la diferencia se compensa." }
+    ]
+  },
+  {
+    "slug": "aspiradora", "art": "una", "nombre": "aspiradora", "cat": "limpieza", "modo": "potencia",
+    "wMin": 400, "wTyp": 700, "wMax": 900, "factor": 1, "horas": 0.25, "dias": 365, "fecha": "2026-11-12",
+    "compra": "aspiradora sin bolsa eficiente",
+    "intro": "Una aspiradora con cable consume entre 400 y 900 W; la normativa europea limita la potencia de las nuevas a 900 W. Como se usa poco tiempo, su peso en la factura es pequeño.",
+    "factores": [
+      "La potencia de succión seleccionada.",
+      "Los minutos de uso a la semana.",
+      "El estado de filtros y bolsa: obstruidos, limpian peor y alargan la tarea."
+    ],
+    "consejos": [
+      "Baja la potencia en suelos duros; el máximo solo hace falta en alfombras.",
+      "Vacía el depósito y limpia los filtros con frecuencia.",
+      "Más vatios no significa mejor succión: fíjate en el diseño del cepillo y en las pruebas de rendimiento."
+    ],
+    "faq": [
+      { "q": "¿Gasta menos una aspiradora sin cable?", "a": "Sí. Sus baterías almacenan poca energía, así que una carga completa suele quedar por debajo de 0,1 kWh. A cambio, tienen menos autonomía y potencia que las de cable." },
+      { "q": "¿Y un robot aspirador?", "a": "Consume muy poco: cada limpieza son unas pocas centésimas de kWh, más un pequeño consumo continuo de la base de carga." }
+    ]
+  },
+  {
+    "slug": "secador-de-pelo", "art": "un", "nombre": "secador de pelo", "cat": "limpieza", "modo": "potencia",
+    "wMin": 1200, "wTyp": 1800, "wMax": 2400, "factor": 1, "horas": 0.15, "dias": 365, "fecha": "2026-11-12",
+    "compra": "secador de pelo iónico",
+    "intro": "Un secador de pelo es un pequeño calefactor: entre 1.200 y 2.400 W mientras está encendido. Lo salva que se usa unos minutos, aunque en casas donde se usa a diario y con pelo largo acaba sumando.",
+    "factores": [
+      "La posición de calor y de velocidad.",
+      "Los minutos por secado, muy ligados al largo del pelo.",
+      "Cuántas personas lo usan en casa."
+    ],
+    "consejos": [
+      "Seca bien con la toalla antes de encenderlo.",
+      "Usa calor medio: daña menos el pelo y la resistencia consume menos.",
+      "Termina con aire frío, que solo mueve el ventilador."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta el secador en diez minutos?", "a": "Con 1.800 W, unos 0,3 kWh. Usado a diario son algo más de 100 kWh al año." },
+      { "q": "¿Consumen menos los secadores iónicos o de motor digital?", "a": "No necesariamente tienen menos potencia, pero algunos secan más rápido. El ahorro, cuando lo hay, viene de reducir los minutos de uso." }
+    ]
+  },
+  {
+    "slug": "televisor", "art": "un", "nombre": "televisor", "cat": "electronica", "modo": "potencia",
+    "wMin": 50, "wTyp": 100, "wMax": 200, "factor": 1, "horas": 4, "dias": 365, "fecha": "2026-11-12",
+    "compra": "televisor 55 pulgadas eficiente",
+    "intro": "Un televisor actual consume entre 50 y 200 W según el tamaño, la tecnología del panel y el brillo. Uno de 55 pulgadas se mueve en torno a 100 W con contenido normal y bastante más con HDR.",
+    "factores": [
+      "El tamaño de la pantalla: el consumo crece con la superficie.",
+      "El brillo y el modo de imagen; los modos vívidos y el HDR disparan el gasto.",
+      "Las horas que pasa encendido, incluidas las que nadie lo mira."
+    ],
+    "consejos": [
+      "Usa el modo de imagen estándar o eco y activa el sensor de luz ambiente.",
+      "Programa el apagado automático por inactividad.",
+      "No lo dejes encendido de fondo: es de los pocos gastos que se eliminan sin perder nada."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta el televisor en standby?", "a": "Los modelos actuales, alrededor de 0,5 W, es decir, unos 4 kWh al año. Puede ser bastante más si dejas activado el encendido rápido o la conexión permanente a la red." },
+      { "q": "¿Gasta más un OLED que un LED?", "a": "Depende de la imagen. El OLED consume menos en escenas oscuras y más en las muy claras; a igual tamaño, las cifras medias son parecidas." }
+    ]
+  },
+  {
+    "slug": "ordenador-de-sobremesa", "art": "un", "nombre": "ordenador de sobremesa", "cat": "electronica", "modo": "potencia",
+    "wMin": 60, "wTyp": 200, "wMax": 500, "factor": 0.6, "horas": 6, "dias": 365, "fecha": "2026-11-12",
+    "compra": "enchufe inteligente medidor de consumo",
+    "intro": "Un ordenador de sobremesa consume desde unos 60 W en ofimática hasta 500 W o más en un equipo de juegos a pleno rendimiento. La potencia de la fuente de alimentación es el máximo que puede entregar, no lo que gasta normalmente.",
+    "factores": [
+      "La tarjeta gráfica y el procesador, y la carga a la que trabajan.",
+      "El monitor, que añade entre 20 y 60 W más.",
+      "Las horas encendido sin que nadie lo use."
+    ],
+    "consejos": [
+      "Configura la suspensión automática a los pocos minutos de inactividad.",
+      "Apágalo por la noche: en reposo sigue consumiendo varias decenas de vatios.",
+      "En juegos, limitar los fotogramas por segundo reduce el consumo de la gráfica."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un PC gaming?", "a": "Jugando, entre 300 y 500 W con el monitor incluido, y más en equipos de gama alta. Navegando o en el escritorio baja a 60-100 W." },
+      { "q": "¿Es mejor apagar o suspender el ordenador?", "a": "Suspendido consume solo un par de vatios, así que para pausas cortas es lo más práctico. Para toda la noche o varios días, apágalo." }
+    ]
+  },
+  {
+    "slug": "portatil", "art": "un", "nombre": "portátil", "cat": "electronica", "modo": "potencia",
+    "wMin": 30, "wTyp": 50, "wMax": 100, "factor": 0.6, "horas": 6, "dias": 365, "fecha": "2026-11-12",
+    "compra": "portátil ligero eficiente",
+    "intro": "Un portátil consume entre 30 y 100 W cuando se carga y se usa a la vez, y bastante menos en tareas ligeras con la batería ya llena. Es entre tres y cinco veces más eficiente que un sobremesa equivalente.",
+    "factores": [
+      "El brillo de la pantalla y el tipo de tarea.",
+      "Si lleva tarjeta gráfica dedicada.",
+      "El estado de carga de la batería: cargando consume más."
+    ],
+    "consejos": [
+      "Baja el brillo y usa el modo de ahorro de energía cuando no necesites rendimiento.",
+      "Cierra la tapa para que entre en suspensión en las pausas.",
+      "Si lo usas siempre enchufado, activa el límite de carga de la batería para alargar su vida."
+    ],
+    "faq": [
+      { "q": "¿Gasta mucho dejar el portátil siempre enchufado?", "a": "No. Con la batería llena, el cargador solo aporta lo que el equipo usa en ese momento. El consumo depende de lo que estés haciendo, no de que esté enchufado." },
+      { "q": "¿Cuánto cuesta cargar un portátil?", "a": "Una carga completa son entre 0,05 y 0,1 kWh, según la capacidad de la batería: uno o dos céntimos." }
+    ]
+  },
+  {
+    "slug": "router-wifi", "art": "un", "nombre": "router wifi", "cat": "electronica", "modo": "potencia",
+    "wMin": 5, "wTyp": 10, "wMax": 20, "factor": 1, "horas": 24, "dias": 365, "fecha": "2026-11-12",
+    "compra": "enchufe programable temporizador",
+    "intro": "Un router consume poco, entre 5 y 20 W, pero no se apaga nunca. Esas 8.760 horas al año lo convierten en un gasto fijo pequeño y constante, parecido al de un cargador de portátil siempre en uso.",
+    "factores": [
+      "El modelo: los routers con wifi de última generación y muchos puertos consumen más.",
+      "Los equipos añadidos, como repetidores, redes en malla o el descodificador.",
+      "El tráfico de datos, que influye poco."
+    ],
+    "consejos": [
+      "Apágalo en vacaciones si no tienes cámaras, alarmas o domótica que lo necesiten.",
+      "Revisa si tu router permite programar el apagado del wifi por la noche.",
+      "Cuenta también el descodificador de televisión: a menudo consume más que el propio router."
+    ],
+    "faq": [
+      { "q": "¿Merece la pena apagar el router por la noche?", "a": "El ahorro es de unos pocos euros al año y puede interferir con actualizaciones o dispositivos conectados. Es una decisión más de comodidad que de factura." },
+      { "q": "¿Cuánto gasta un repetidor wifi?", "a": "Entre 3 y 10 W cada uno, encendido todo el día. Una red en malla con tres nodos puede consumir tanto como el propio router o más." }
+    ]
+  },
+  {
+    "slug": "consola-de-videojuegos", "art": "una", "nombre": "consola de videojuegos", "cat": "electronica", "modo": "potencia",
+    "wMin": 15, "wTyp": 150, "wMax": 220, "factor": 1, "horas": 2, "dias": 365, "fecha": "2026-11-12",
+    "compra": "enchufe inteligente medidor de consumo",
+    "intro": "Las consolas de sobremesa actuales consumen entre 150 y 220 W en juegos exigentes, y las portátiles o híbridas apenas 15 W. En menús o viendo vídeo, el consumo baja a menos de la mitad.",
+    "factores": [
+      "El tipo de consola y el juego: los títulos más exigentes llevan el consumo al máximo.",
+      "El modo de reposo, que puede gastar varios vatios si mantiene descargas y red activas.",
+      "El televisor, que hay que sumar a la cuenta."
+    ],
+    "consejos": [
+      "Activa el modo de ahorro de energía en los ajustes de la consola.",
+      "Apágala del todo si no necesitas descargas en reposo.",
+      "Para ver series, la aplicación del televisor gasta mucho menos que la consola."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una consola en reposo?", "a": "Desde menos de 1 W en el modo de ahorro hasta unos 10 W si mantiene la red, las descargas y la carga de mandos activas. Se elige en los ajustes de energía." },
+      { "q": "¿Gasta más una consola o un PC gaming?", "a": "Normalmente el PC, que puede duplicar o triplicar el consumo de una consola según la tarjeta gráfica." }
+    ]
+  },
+  {
+    "slug": "cargador-de-movil", "art": "un", "nombre": "cargador de móvil", "cat": "electronica", "modo": "potencia",
+    "wMin": 5, "wTyp": 15, "wMax": 30, "factor": 0.7, "horas": 1.5, "dias": 365, "fecha": "2026-11-12",
+    "compra": "cargador USB-C carga rápida",
+    "intro": "Cargar el móvil es uno de los gastos eléctricos más pequeños de una casa. La batería de un teléfono almacena entre 15 y 20 Wh, así que una carga completa al día son unos 6 kWh en todo el año.",
+    "factores": [
+      "La capacidad de la batería y cuántas veces la cargas.",
+      "La carga rápida, que consume más potencia pero durante menos tiempo.",
+      "La carga inalámbrica, que pierde más energía en forma de calor."
+    ],
+    "consejos": [
+      "No te preocupes por el coste: lo que cuida la batería es no dejarla siempre al 100 %.",
+      "Usa carga por cable cuando puedas; es más eficiente que la inalámbrica.",
+      "Desenchufar el cargador ahorra céntimos al año, hazlo sobre todo por seguridad."
+    ],
+    "faq": [
+      { "q": "¿Gasta un cargador enchufado sin el móvil?", "a": "Prácticamente nada: los cargadores actuales consumen menos de 0,1 W en vacío, unos céntimos al año." },
+      { "q": "¿Gasta más la carga rápida?", "a": "No de forma apreciable. Entrega más potencia durante menos tiempo, y la energía total que acaba en la batería es la misma." }
+    ]
+  },
+  {
+    "slug": "bombilla-led", "art": "una", "nombre": "bombilla LED", "cat": "electronica", "modo": "potencia",
+    "wMin": 5, "wTyp": 9, "wMax": 15, "factor": 1, "horas": 5, "dias": 365, "fecha": "2026-11-12",
+    "compra": "bombillas LED E27 pack",
+    "intro": "Una bombilla LED de 9 W da la misma luz que una incandescente antigua de 60 W. Encendida cinco horas al día, cuesta unos pocos euros al año; lo que cuenta es cuántas tienes y cuántas se quedan encendidas sin necesidad.",
+    "factores": [
+      "La potencia en vatios y los lúmenes que necesitas en cada estancia.",
+      "El número de puntos de luz de la casa.",
+      "Las horas de encendido, que en invierno aumentan."
+    ],
+    "consejos": [
+      "Compara por lúmenes, no por vatios: unos 800 lúmenes equivalen a la antigua bombilla de 60 W.",
+      "Sustituye primero los halógenos que queden; gastan hasta diez veces más.",
+      "En pasillos y trasteros, un detector de presencia evita los olvidos."
+    ],
+    "faq": [
+      { "q": "¿Cuánto ahorra una bombilla LED frente a una halógena?", "a": "En torno a un 80 %. Un foco halógeno de 50 W se sustituye por un LED de 5 a 7 W que da una luz equivalente." },
+      { "q": "¿Gasta más encender y apagar la luz que dejarla encendida?", "a": "No con los LED. El pico de arranque es insignificante, así que apagar siempre ahorra, aunque sea por poco tiempo." }
+    ]
+  },
+  {
+    "slug": "luces-de-navidad", "art": "una", "nombre": "guirnalda de luces de Navidad", "cat": "electronica", "modo": "potencia",
+    "wMin": 3, "wTyp": 6, "wMax": 20, "factor": 1, "horas": 6, "dias": 35, "fecha": "2026-11-12",
+    "compra": "luces de Navidad LED con temporizador",
+    "intro": "Las luces de Navidad LED consumen muy poco: una guirnalda de 100 a 300 bombillas ronda entre 3 y 20 W. Toda la temporada, encendidas seis horas al día, cuestan céntimos. Las antiguas de bombillas incandescentes gastaban unas diez veces más.",
+    "factores": [
+      "La tecnología: LED o incandescente.",
+      "El número de guirnaldas y de bombillas.",
+      "Las horas de encendido diarias y los días que dura la decoración."
+    ],
+    "consejos": [
+      "Usa un temporizador para que se apaguen solas de madrugada.",
+      "Si conservas guirnaldas incandescentes, cambiarlas por LED se amortiza pronto y es más seguro.",
+      "En exterior, las solares evitan cables y no suman nada a la factura."
+    ],
+    "faq": [
+      { "q": "¿Cuánto cuesta tener el árbol encendido toda la Navidad?", "a": "Con dos o tres guirnaldas LED, menos de un euro en toda la temporada. Con luces incandescentes antiguas podían ser varios euros." },
+      { "q": "¿Es seguro dejar las luces encendidas toda la noche?", "a": "Es mejor apagarlas al acostarse o al salir de casa. Las LED apenas se calientan, pero un temporizador evita riesgos y gasto innecesario." }
+    ]
+  },
+  {
+    "slug": "patinete-electrico", "art": "un", "nombre": "patinete eléctrico", "cat": "exterior", "modo": "ciclo",
+    "kwhMin": 0.25, "kwhTyp": 0.35, "kwhMax": 0.6, "usos": 4, "dias": 365, "fecha": "2026-11-12",
+    "compra": "patinete eléctrico adulto",
+    "intro": "Cargar un patinete eléctrico cuesta céntimos. Sus baterías tienen entre 250 y 500 Wh, y una carga completa consume algo más que esa cifra por las pérdidas del cargador. Con ella se recorren entre 20 y 40 kilómetros.",
+    "factores": [
+      "La capacidad de la batería en Wh.",
+      "Los kilómetros que haces y cuántas cargas necesitas a la semana.",
+      "El peso, las cuestas y la presión de las ruedas, que cambian la autonomía."
+    ],
+    "consejos": [
+      "Mantén las ruedas a la presión recomendada: es lo que más afecta a la autonomía.",
+      "Evita descargar la batería del todo y no la guardes meses a cero.",
+      "Usa siempre el cargador original y no lo dejes cargando sin vigilancia toda la noche."
+    ],
+    "faq": [
+      { "q": "¿Cuánto cuesta recorrer 100 km en patinete eléctrico?", "a": "Alrededor de 1 a 1,5 kWh, que con un precio normal de la luz son unos 20 o 30 céntimos. Es uno de los medios de transporte más baratos por kilómetro." },
+      { "q": "¿Cuánto tarda en cargarse?", "a": "Entre 4 y 8 horas con el cargador de serie, según la batería. El cargador consume entre 70 y 150 W mientras carga." }
+    ]
+  },
+  {
+    "slug": "depuradora-de-piscina", "art": "una", "nombre": "depuradora de piscina", "cat": "exterior", "modo": "potencia",
+    "wMin": 370, "wTyp": 550, "wMax": 1100, "factor": 1, "horas": 6, "dias": 120, "fecha": "2026-11-12",
+    "compra": "programador depuradora piscina",
+    "intro": "La bomba de una depuradora de piscina doméstica tiene entre 370 y 1.100 W, es decir, de medio a caballo y medio. Funciona varias horas al día durante toda la temporada de baño, y por eso es el mayor gasto eléctrico de una piscina.",
+    "factores": [
+      "La potencia de la bomba, que debe ir acorde con el volumen de la piscina.",
+      "Las horas de filtrado diarias, que aumentan con la temperatura del agua.",
+      "El estado del filtro: sucio, obliga a filtrar más tiempo."
+    ],
+    "consejos": [
+      "Programa el filtrado en las horas más baratas de tu tarifa.",
+      "Ajusta las horas a la temperatura del agua en lugar de dejar un horario fijo todo el verano.",
+      "Una bomba de velocidad variable puede reducir el consumo a menos de la mitad."
+    ],
+    "faq": [
+      { "q": "¿Cuántas horas debe funcionar la depuradora?", "a": "Una regla habitual es dividir la temperatura del agua entre dos: con el agua a 26 °C, unas 13 horas en pleno verano, y bastantes menos al principio y al final de la temporada. El objetivo es mover todo el volumen de la piscina al menos una vez al día." },
+      { "q": "¿Hay que tenerla encendida en invierno?", "a": "Si la piscina se hiberna con cobertor y producto de invernaje, basta con una o dos horas algunos días, o nada, según el método elegido." }
+    ]
+  }
+]

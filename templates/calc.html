@@ -1,0 +1,32 @@
+<form class="calc" data-modo="{{modo}}" onsubmit="return false" novalidate>
+  {{selector}}
+  <div class="calc-fields">
+    <label data-for="potencia">Potencia (W)
+      <input name="w" type="number" inputmode="decimal" min="0" step="any" value="{{w}}">
+    </label>
+    <label data-for="potencia">Horas de uso al día
+      <input name="horas" type="number" inputmode="decimal" min="0" max="24" step="any" value="{{horas}}">
+    </label>
+    <label data-for="potencia">Carga media (%)
+      <input name="factor" type="number" inputmode="decimal" min="0" max="100" step="any" value="{{factorPct}}">
+    </label>
+    <label data-for="ciclo">Consumo por uso (kWh)
+      <input name="kwh" type="number" inputmode="decimal" min="0" step="any" value="{{kwh}}">
+    </label>
+    <label data-for="ciclo">Usos por semana
+      <input name="usos" type="number" inputmode="decimal" min="0" step="any" value="{{usos}}">
+    </label>
+    <label>Días de uso al año
+      <input name="dias" type="number" inputmode="numeric" min="0" max="366" step="1" value="{{dias}}">
+    </label>
+    <label>Precio de la luz (€/kWh)
+      <input name="precio" type="number" inputmode="decimal" min="0" step="any" value="{{precioNum}}">
+    </label>
+  </div>
+  <div class="calc-out" aria-live="polite">
+    <div><span data-out="unitLabel">{{unitLabel}}</span><strong data-out="unit">{{oUnit}}</strong></div>
+    <div><span>Al día</span><strong data-out="dia">{{oDia}}</strong><small data-out="kwhDia">{{oKwhDia}}</small></div>
+    <div><span>Al mes de uso</span><strong data-out="mes">{{oMes}}</strong><small data-out="kwhMes">{{oKwhMes}}</small></div>
+    <div class="big"><span>Al año</span><strong data-out="ano">{{oAno}}</strong><small data-out="kwhAno">{{oKwhAno}}</small></div>
+  </div>
+</form>

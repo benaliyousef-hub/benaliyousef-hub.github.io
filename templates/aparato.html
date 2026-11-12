@@ -1,0 +1,57 @@
+{{bread}}
+<article class="wrap page">
+  <header class="page-head">
+    <p class="eyebrow"><a href="/categoria/{{catSlug}}/">{{catNombre}}</a></p>
+    <h1>{{h1}}</h1>
+    <p class="answer">{{respuesta}}</p>
+    <p class="meta">Actualizado el <time datetime="{{fechaIso}}">{{fecha}}</time> · Precio de referencia: {{precio}} €/kWh · <a href="/metodologia/">Cómo calculamos</a></p>
+  </header>
+
+  <section class="calc-box">
+    <h2>Calcula tu caso</h2>
+    <p>Cambia los datos por los de tu aparato y tu factura. El resultado se actualiza al instante.</p>
+    {{calc}}
+  </section>
+
+  <section>
+    <h2>Tabla de consumo: {{nombre}}</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Escenario</th><th scope="col">{{colPot}}</th><th scope="col">kWh al día</th><th scope="col">Coste por {{unidad}}</th><th scope="col">Al mes de uso</th><th scope="col">Al año</th></tr></thead>
+        <tbody>{{tabla}}</tbody>
+      </table>
+    </div>
+    <p class="note">Con la luz a {{precio}} €/kWh. {{nota}}</p>
+  </section>
+
+  <section>
+    <h2>Qué consumo esperar</h2>
+    <p>{{intro}}</p>
+    <h3>De qué depende el gasto</h3>
+    <ul>{{factores}}</ul>
+  </section>
+
+  <section>
+    <h2>Cómo se hace la cuenta</h2>
+    <p class="formula">{{formula}}</p>
+    <p>{{cargaNota}} Si quieres el dato exacto de tu aparato, mídelo con un enchufe con medidor de consumo: te da los kWh reales sin suposiciones. Tienes el método completo en <a href="/guias/como-calcular-el-consumo-electrico/">cómo calcular el consumo eléctrico de cualquier aparato</a>.</p>
+  </section>
+
+  <section>
+    <h2>Cómo gastar menos</h2>
+    <ul>{{consejos}}</ul>
+  </section>
+
+  {{amazon}}
+
+  <section>
+    <h2>Preguntas frecuentes</h2>
+    {{faq}}
+  </section>
+
+  <section>
+    <h2>Compara con otros aparatos</h2>
+    <div class="cards">{{relacionados}}</div>
+    <p><a class="link" href="/cuanto-gasta/">Ver todos los aparatos →</a></p>
+  </section>
+</article>

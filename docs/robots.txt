@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benaliyousef-hub.github.io/sitemap.xml

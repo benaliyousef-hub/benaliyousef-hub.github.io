@@ -1,0 +1,103 @@
+{
+  "siteUrl": "https://benaliyousef-hub.github.io",
+  "nombre": "Vatímetro",
+  "lema": "Cuánto gasta cada aparato de tu casa, en kWh y en euros",
+  "precioKwh": 0.18,
+  "amazonTag": "",
+  "titular": "",
+  "nif": "",
+  "domicilio": "",
+  "email": "",
+  "categorias": [
+    {
+      "slug": "climatizacion",
+      "nombre": "Climatización y agua caliente",
+      "desc": "Aire acondicionado, calefacción eléctrica, termo y ventiladores.",
+      "meta": "Cuánto gastan el aire acondicionado, el calefactor, el radiador de aceite, el termo eléctrico y otros aparatos de climatización, en kWh y en euros.",
+      "intro": "Calentar y enfriar es lo que más pesa en la factura de la luz. Aquí tienes el consumo de cada aparato de climatización y agua caliente, ordenado de más a menos gasto anual."
+    },
+    {
+      "slug": "cocina",
+      "nombre": "Cocina",
+      "desc": "Frigorífico, horno, placa, microondas, lavavajillas y pequeños electrodomésticos.",
+      "meta": "Cuánto gastan el frigorífico, el horno, la vitrocerámica, la inducción, el microondas, la freidora de aire y el lavavajillas, en kWh y en euros.",
+      "intro": "En la cocina conviven el aparato que nunca se apaga, el frigorífico, y los que más potencia piden de golpe, como el horno o la placa. Este es el gasto de cada uno."
+    },
+    {
+      "slug": "limpieza",
+      "nombre": "Lavado, limpieza y cuidado personal",
+      "desc": "Lavadora, secadora, plancha, aspiradora y secador de pelo.",
+      "meta": "Cuánto gastan la lavadora, la secadora, la plancha, la aspiradora y el secador de pelo: consumo por uso y coste al año en euros.",
+      "intro": "Son aparatos que se usan por ciclos o ratos cortos, así que lo que importa es cuánto gastan cada vez y cuántas veces los pones a la semana."
+    },
+    {
+      "slug": "electronica",
+      "nombre": "Electrónica e iluminación",
+      "desc": "Televisor, ordenador, router, consola, cargadores y bombillas.",
+      "meta": "Cuánto gastan el televisor, el ordenador, el portátil, el router wifi, la consola, el cargador del móvil y las bombillas LED, en kWh y en euros.",
+      "intro": "Cada uno gasta poco, pero están encendidos muchas horas y son muchos. Aquí puedes ver cuáles merece la pena vigilar y cuáles no."
+    },
+    {
+      "slug": "exterior",
+      "nombre": "Exterior y movilidad",
+      "desc": "Depuradora de piscina y patinete eléctrico.",
+      "meta": "Cuánto gastan la depuradora de la piscina y la carga del patinete eléctrico: consumo en kWh y coste en euros.",
+      "intro": "Lo que se enchufa fuera de casa o en el garaje también cuenta en la factura. Este es el consumo de los aparatos de exterior y movilidad."
+    }
+  ],
+  "textos": {
+    "tituloHome": "Vatímetro: cuánto gasta cada aparato de tu casa ({anio})",
+    "descHome": "Calcula cuánto gasta cada electrodoméstico en kWh y en euros con tu precio de la luz. {total} aparatos con tablas de consumo, fórmulas y consejos de ahorro.",
+    "tituloAparato": "¿Cuánto gasta {art} {nombre}? Consumo y coste ({anio})",
+    "h1Aparato": "¿Cuánto gasta {art} {nombre}?",
+    "descAparato": "{ArtCap} {nombre} gasta entre {eurAnoMin} y {eurAnoMax} € al año según su potencia y el uso. Calcula el consumo en kWh y el coste con tu precio de la luz.",
+    "respuestaPotencia": "{ArtCap} {nombre} de {w} W, con {tiempo} de uso al día, consume unos <strong>{kwhDia} kWh diarios</strong>. Con la luz a {precio} €/kWh eso son <strong>{eurMes} € al mes</strong> de uso y unos <strong>{eurAno} € al año</strong>.",
+    "respuestaCiclo": "{ArtCap} {nombre} consume unos <strong>{kwh} kWh por uso</strong>, es decir, {eurUso} € cada vez con la luz a {precio} €/kWh. Con {usos} usos por semana son <strong>{eurMes} € al mes</strong> y unos <strong>{eurAno} € al año</strong>.",
+    "notaDias": "El coste anual está calculado para {dias} días de uso al año, porque es un aparato de temporada.",
+    "formulaPotencia": "{w} W × {factorPct} % de carga media × {horasNum} h ÷ 1.000 = {kwhDia} kWh al día. Y {kwhDia} kWh × {precio} €/kWh = {eurDia} € al día.",
+    "formulaCiclo": "{kwh} kWh por uso × {usos} usos a la semana ÷ 7 = {kwhDia} kWh al día de media. Y {kwhDia} kWh × {precio} €/kWh = {eurDia} € al día.",
+    "cargaNotaParcial": "La carga media refleja que este aparato no trabaja a plena potencia todo el tiempo: el termostato, el compresor o el regulador lo hacen parar y arrancar.",
+    "cargaNotaTotal": "Mientras está encendido, este aparato consume prácticamente su potencia completa, por eso la carga media es del 100 %.",
+    "cargaNotaCiclo": "El consumo por uso varía mucho según el programa, la temperatura y la carga, así que el valor habitual es una media entre programas cortos y largos.",
+    "amazonTitulo": "Mide tu consumo real",
+    "amazonTexto": "Las tablas dan una referencia, pero la única forma de saber lo que gasta tu aparato es medirlo. Un enchufe con medidor te da los kWh reales en unos días de uso.",
+    "amazonMedidor": "Ver medidores de consumo",
+    "amazonMedidorBusqueda": "enchufe medidor de consumo eléctrico",
+    "amazonAparato": "Ver modelos eficientes de {nombre}",
+    "amazonAviso": "Enlaces de afiliado: si compras a través de ellos recibimos una comisión sin coste para ti. No cambia nuestras cifras ni nuestros consejos.",
+    "tituloHub": "Cuánto gasta cada electrodoméstico: tabla de consumo ({anio})",
+    "descHub": "Tabla con el consumo en kWh y el coste en euros de {total} aparatos y electrodomésticos, del termo eléctrico al cargador del móvil.",
+    "h1Hub": "Cuánto gasta cada aparato",
+    "introHub": "{total} aparatos con su consumo habitual y lo que cuestan al año. Entra en cualquiera para calcularlo con tu potencia, tus horas de uso y tu precio de la luz.",
+    "hubTablaTitulo": "Tabla completa de consumo",
+    "catTablaTitulo": "Comparativa de consumo",
+    "notaTabla": "Valores estimados con potencia y uso habituales. El consumo real depende del modelo, de cómo lo uses y de tu tarifa.",
+    "tituloCat": "{cat}: cuánto gasta cada aparato ({anio})",
+    "h1Cat": "{cat}: cuánto gastan",
+    "crumbGuias": "Guías",
+    "tituloGuias": "Guías de consumo eléctrico",
+    "descGuias": "Guías claras para calcular el consumo de cualquier aparato, reducir el consumo fantasma y entender la etiqueta energética.",
+    "h1Guias": "Guías de consumo eléctrico",
+    "introGuias": "Lo justo para entender tu factura y decidir con números: cómo se calcula el consumo, dónde se escapa la luz sin que lo notes y cómo leer la etiqueta de un electrodoméstico.",
+    "titulo404": "Página no encontrada",
+    "texto404": "Esta página no existe o ha cambiado de dirección. Prueba a buscar el aparato en el listado completo."
+  },
+  "homeFaq": [
+    {
+      "q": "¿Cómo se calcula lo que gasta un aparato?",
+      "a": "Multiplica su potencia en kilovatios por las horas que está funcionando y tendrás los kWh consumidos. Después multiplica esos kWh por el precio que pagas por cada kWh. Un aparato de 1.000 W encendido una hora consume 1 kWh."
+    },
+    {
+      "q": "¿Qué precio de la luz tengo que poner?",
+      "a": "El de tu factura: busca el precio del término de energía en €/kWh y súmale los impuestos. El valor que aparece por defecto es solo un ejemplo para que las tablas sean comparables; la calculadora recuerda el que tú escribas."
+    },
+    {
+      "q": "¿Por qué mi aparato no gasta lo mismo que dice la tabla?",
+      "a": "Porque las tablas usan potencias y horas de uso habituales. Tu modelo, su antigüedad, la temperatura de casa y tus costumbres cambian el resultado. Para un dato exacto, mide el aparato con un enchufe con medidor de consumo durante unos días."
+    },
+    {
+      "q": "¿Qué aparatos gastan más luz en una casa?",
+      "a": "Los que producen calor o frío durante muchas horas: el termo eléctrico, la calefacción eléctrica, el aire acondicionado y la secadora. El frigorífico tiene poca potencia, pero suma porque funciona todo el año."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "como-calcular-el-consumo-electrico",
+    "titulo": "Cómo calcular el consumo eléctrico de cualquier aparato",
+    "desc": "La fórmula para pasar de vatios a kWh y de kWh a euros, con ejemplos, y cómo encontrar la potencia real de un aparato.",
+    "fecha": "2026-11-12"
+  },
+  {
+    "slug": "consumo-fantasma-standby",
+    "titulo": "Consumo fantasma: cuánto gastan los aparatos en standby",
+    "desc": "Qué aparatos siguen gastando luz apagados, cuánto supone al año y qué merece la pena desenchufar de verdad.",
+    "fecha": "2026-11-12"
+  },
+  {
+    "slug": "etiqueta-energetica-como-leerla",
+    "titulo": "Etiqueta energética: cómo leerla y calcular lo que te costará",
+    "desc": "Qué significan las letras de la A a la G, dónde está el dato de kWh y cómo convertirlo en euros al año antes de comprar.",
+    "fecha": "2026-11-12"
+  }
+]

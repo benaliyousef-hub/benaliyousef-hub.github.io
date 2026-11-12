@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:type" content="{{ogType}}">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="{{nombre_sitio}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:url" content="{{canonical}}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#11161a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v={{ver}}">
+{{jsonld}}
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/" aria-label="{{nombre_sitio}}, inicio">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13.5 2 4 13.5h6.2L9 22l10-12.2h-6.4z" fill="currentColor"/></svg>
+      <span>{{nombre_sitio}}</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="/cuanto-gasta/">Aparatos</a>
+      <a href="/guias/">Guías</a>
+      <a href="/metodologia/">Metodología</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+{{content}}
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand">{{nombre_sitio}}</p>
+      <p>{{lema}}. Las cifras son estimaciones orientativas: el consumo real depende de tu aparato, de cómo lo uses y de tu tarifa.</p>
+    </div>
+    <nav aria-label="Pie">
+      <a href="/cuanto-gasta/">Todos los aparatos</a>
+      <a href="/guias/">Guías</a>
+      <a href="/metodologia/">Metodología</a>
+      <a href="/aviso-legal/">Aviso legal</a>
+      <a href="/privacidad/">Privacidad</a>
+    </nav>
+  </div>
+  <p class="wrap foot-copy">© {{anio}} {{nombre_sitio}}</p>
+</footer>
+<script src="/assets/app.js?v={{ver}}" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "metodologia",
+    "titulo": "Metodología: cómo calculamos el consumo",
+    "desc": "De dónde salen las cifras de Vatímetro, qué fórmulas usamos, qué suponemos y qué límites tienen las estimaciones.",
+    "fecha": "2026-11-12"
+  },
+  {
+    "slug": "aviso-legal",
+    "titulo": "Aviso legal",
+    "desc": "Datos del titular y condiciones de uso de este sitio web.",
+    "fecha": "2026-11-12",
+    "noindex": true
+  },
+  {
+    "slug": "privacidad",
+    "titulo": "Política de privacidad y cookies",
+    "desc": "Qué datos trata este sitio web y cómo usa el almacenamiento del navegador.",
+    "fecha": "2026-11-12",
+    "noindex": true
+  }
+]
