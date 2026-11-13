@@ -678,5 +678,45 @@
       { "q": "¿Existen los emisores térmicos de bajo consumo?", "a": "No en sentido estricto. Como cualquier calefacción por resistencia, convierte cada kWh de electricidad en 1 kWh de calor, ni más ni menos. Lo que ahorra es un buen termostato y la programación, que evitan calentar de más. Una bomba de calor sí da entre 3 y 4 kWh de calor por cada kWh eléctrico." },
       { "q": "¿Qué gasta menos, un emisor térmico o un radiador de aceite?", "a": "A igual potencia y con el mismo calor aportado, gastan lo mismo. El emisor suele tener un termostato electrónico más preciso y programación horaria, y eso puede reducir algo el consumo real frente a un radiador de aceite con rueda mecánica." }
     ]
+  },
+  {
+    "slug": "brasero-electrico", "art": "un", "nombre": "brasero eléctrico", "cat": "climatizacion", "modo": "potencia", "emoji": "🔥",
+    "wMin": 400, "wTyp": 600, "wMax": 900, "factor": 1, "horas": 4, "dias": 120, "fecha": "2026-11-13",
+    "compra": "brasero eléctrico mesa camilla bajo consumo",
+    "intro": "El brasero eléctrico de mesa camilla es una resistencia de poca potencia que calienta el hueco bajo las faldas de la mesa. Casi todos tienen dos o tres posiciones, lo habitual entre 400 y 900 W, y sin termostato consumen esa potencia de forma continua mientras están encendidos.",
+    "factores": [
+      "La posición elegida: en la más baja gasta menos de la mitad que en la más alta.",
+      "Las horas que pasa encendido, que en invierno suelen ser muchas porque se deja toda la tarde.",
+      "Si tiene termostato: los modelos que lo llevan se apagan al llegar a la temperatura y gastan menos."
+    ],
+    "consejos": [
+      "Usa la posición alta solo para arrancar y pasa a la baja en cuanto la mesa esté caliente.",
+      "Mantén las faldas de la mesa bien cerradas: el calor que se escapa es consumo perdido.",
+      "Enchúfalo a un temporizador o apágalo al levantarte; además de gastar, dejarlo encendido sin nadie es un riesgo."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un brasero eléctrico por hora?", "a": "Lo que marque su posición: en la de 400 W consume 0,4 kWh por hora y en la de 900 W, 0,9 kWh. Multiplica esos kWh por el precio que pagas por cada kWh para saber el coste." },
+      { "q": "¿Gasta menos un brasero que un calefactor?", "a": "Sí, porque tiene menos potencia y calienta solo a quien está sentado a la mesa, no toda la habitación. Un calefactor de 2.000 W consume en una hora lo que un brasero de 500 W en cuatro." }
+    ]
+  },
+  {
+    "slug": "estufa-electrica", "art": "una", "nombre": "estufa eléctrica", "cat": "climatizacion", "modo": "potencia", "emoji": "♨️",
+    "wMin": 400, "wTyp": 800, "wMax": 1200, "factor": 1, "horas": 3, "dias": 120, "fecha": "2026-11-13",
+    "compra": "estufa eléctrica halógena bajo consumo",
+    "intro": "Las estufas eléctricas de barras, de cuarzo o halógenas, calientan por radiación lo que tienen delante. Cada barra suele ser de 400 W, así que según las que enciendas el consumo es de 400, 800 o 1.200 W, sin termostato que las haga parar.",
+    "factores": [
+      "El número de barras encendidas: cada una suma unos 400 W.",
+      "El tiempo de uso, porque mientras está encendida consume toda su potencia sin pausas.",
+      "La distancia: calienta bien a quien está enfrente y muy poco el resto de la habitación."
+    ],
+    "consejos": [
+      "Enciende solo las barras que necesites y colócala cerca, orientada hacia ti.",
+      "Úsala para ratos cortos y una sola persona; para calentar toda una habitación durante horas hay opciones más eficientes.",
+      "Apágala al salir de la habitación: no acumula calor, así que no hay nada que aprovechar al dejarla encendida."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una estufa eléctrica por hora?", "a": "Depende de las barras encendidas: con una barra de 400 W consume 0,4 kWh por hora, con dos 0,8 kWh y con tres 1,2 kWh. Multiplica los kWh por tu precio de la luz para obtener el coste." },
+      { "q": "¿Qué gasta más, una estufa eléctrica o un radiador de aceite?", "a": "A plena potencia suele gastar más el radiador de aceite, que tiene entre 1.000 y 2.500 W frente a los 400 a 1.200 W de una estufa de barras. Pero el radiador lleva termostato y calienta toda la habitación, mientras que la estufa solo calienta lo que tiene delante." }
+    ]
   }
 ]
