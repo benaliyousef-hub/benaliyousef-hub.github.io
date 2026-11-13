@@ -68,6 +68,23 @@ $Globales = @{
   titular = (Pend $cfg.titular); nif = (Pend $cfg.nif); domicilio = (Pend $cfg.domicilio); email = (Pend $cfg.email)
   total = $aparatos.Count
 }
+# Monetization. Both stay off until their id is set in config.json.
+$adsId = ([string]$cfg.adsenseId).Trim()
+$amzTag = ([string]$cfg.amazonTag).Trim()
+if ($adsId -and $adsId -notmatch '^ca-pub-\d{16}$') { throw "adsenseId no valido: debe tener la forma ca-pub- seguido de 16 cifras" }
+if ($amzTag -and $amzTag -notmatch '^[A-Za-z0-9][A-Za-z0-9-]*-\d{2}$') { throw "amazonTag no valido: debe tener la forma nombre-21" }
+$Globales.afiliados = $(if ($amzTag) { [string]$cfg.textos.afiliadosNota } else { '' })
+$Globales.adsense = ''
+$Globales.cookies = [string]$cfg.textos.cookiesSin
+if ($adsId) {
+  $Globales.adsense = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + $adsId + '" crossorigin="anonymous"></script>'
+  $Globales.cookies = [string]$cfg.textos.cookiesAds
+}
+function Shop([string]$extra) {
+  if (-not $amzTag) { return '' }
+  $u = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$cfg.textos.amazonMedidorBusqueda) + '&amp;tag=' + $amzTag
+  return '<aside class="shop"><h2>' + $cfg.textos.amazonTitulo + '</h2><p>' + $cfg.textos.amazonTexto + '</p><p class="shop-links"><a rel="sponsored nofollow noopener" target="_blank" href="' + $u + '">' + $cfg.textos.amazonMedidor + '</a>' + $extra + '</p><p class="note">' + $cfg.textos.amazonAviso + '</p></aside>'
+}
 
 function T([string]$key, $map) {
   $s = [string]$cfg.textos.$key
@@ -194,10 +211,9 @@ foreach ($a in $aparatos) {
   $factores = ''; foreach ($x in $a.factores) { $factores += '<li>' + (Esc $x) + '</li>' }
   $consejos = ''; foreach ($x in $a.consejos) { $consejos += '<li>' + (Esc $x) + '</li>' }
   $amazon = ''
-  if (-not [string]::IsNullOrWhiteSpace([string]$cfg.amazonTag)) {
-    $u1 = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$a.compra) + '&amp;tag=' + $cfg.amazonTag
-    $u2 = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$cfg.textos.amazonMedidorBusqueda) + '&amp;tag=' + $cfg.amazonTag
-    $amazon = '<aside class="shop"><h2>' + $cfg.textos.amazonTitulo + '</h2><p>' + $cfg.textos.amazonTexto + '</p><p class="shop-links"><a rel="sponsored nofollow noopener" target="_blank" href="' + $u2 + '">' + $cfg.textos.amazonMedidor + '</a><a rel="sponsored nofollow noopener" target="_blank" href="' + $u1 + '">' + (T 'amazonAparato' $base) + '</a></p><p class="note">' + $cfg.textos.amazonAviso + '</p></aside>'
+  if ($amzTag) {
+    $u1 = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$a.compra) + '&amp;tag=' + $amzTag
+    $amazon = Shop ('<a rel="sponsored nofollow noopener" target="_blank" href="' + $u1 + '">' + (T 'amazonAparato' $base) + '</a>')
   }
   $rel = ''
   foreach ($o in @($aparatos | Where-Object { $_.cat -eq $a.cat -and $_.slug -ne $a.slug } | Select-Object -First 6)) { $rel += (Card $o) }
@@ -271,7 +287,7 @@ foreach ($g in $guias) {
   $gl += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>'
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = $cfg.textos.crumbGuias; u = '/guias/' }, @{ n = $g.titulo })
   $url = $site + '/guias/' + $g.slug + '/'
-  $bodyG = ReadText ("data\guias\" + $g.slug + '.html')
+  $bodyG = (ReadText ("data\guias\" + $g.slug + '.html')) + (Shop '')
   Render @{ rel = "guias\$($g.slug)\index.html"; title = $g.titulo; desc = $g.desc; lastmod = $g.fecha; jsonld = ($cr.ld + (ArticleLd $g.titulo $g.desc $url $g.fecha))
     content = (Fill $tplTexto @{ bread = $cr.html; h1 = (Esc $g.titulo); meta = ('Actualizado el <time datetime="' + $g.fecha + '">' + (FechaLarga $g.fecha) + '</time>'); body = $bodyG }) }
 }
@@ -296,6 +312,7 @@ $sm += '</urlset>' + "`n"
 WriteOut 'sitemap.xml' $sm
 WriteOut 'robots.txt' ("User-agent: *`nAllow: /`n`nSitemap: $site/sitemap.xml`n")
 WriteOut '.nojekyll' ''
+if ($adsId) { WriteOut 'ads.txt' ('google.com, ' + $adsId.Substring(3) + ", DIRECT, f08c47fec0942fa0`n") }
 Copy-Item -Recurse -Force (Join-Path $root 'assets') (Join-Path $dist 'assets')
 Copy-Item -Force (Join-Path $root 'assets\favicon.svg') (Join-Path $dist 'favicon.svg')
 # Files in static/ are copied verbatim to the site root (e.g. search engine verification files).
@@ -309,4 +326,5 @@ Remove-Item -Recurse -Force $dist -ErrorAction SilentlyContinue
 Write-Output ("OK: " + $sitemap.Count + " paginas indexables, " + $aparatos.Count + " aparatos, " + $guias.Count + " guias -> docs")
 if ($site -like '*.example*') { Write-Output 'AVISO: siteUrl es un marcador. Ejecuta con -SiteUrl https://tu-dominio o cambia config.json antes de publicar.' }
 foreach ($k in 'titular', 'nif', 'domicilio', 'email') { if ([string]::IsNullOrWhiteSpace([string]$cfg.$k)) { Write-Output "AVISO: falta '$k' en config.json (aviso legal incompleto)." } }
-if ([string]::IsNullOrWhiteSpace([string]$cfg.amazonTag)) { Write-Output 'AVISO: amazonTag vacio; los bloques de afiliado no se muestran.' }
+if (-not $amzTag) { Write-Output 'AVISO: amazonTag vacio; los bloques de afiliado no se muestran.' }
+if (-not $adsId) { Write-Output 'AVISO: adsenseId vacio; no se carga publicidad de AdSense ni se genera ads.txt.' }
