@@ -296,6 +296,8 @@ WriteOut 'robots.txt' ("User-agent: *`nAllow: /`n`nSitemap: $site/sitemap.xml`n"
 WriteOut '.nojekyll' ''
 Copy-Item -Recurse -Force (Join-Path $root 'assets') (Join-Path $dist 'assets')
 Copy-Item -Force (Join-Path $root 'assets\favicon.svg') (Join-Path $dist 'favicon.svg')
+# Files in static/ are copied verbatim to the site root (e.g. search engine verification files).
+if (Test-Path (Join-Path $root 'static')) { Copy-Item -Force (Join-Path $root 'static\*') $dist }
 
 Write-Output ("OK: " + $sitemap.Count + " paginas indexables, " + $aparatos.Count + " aparatos, " + $guias.Count + " guias -> docs")
 if ($site -like '*.example*') { Write-Output 'AVISO: siteUrl es un marcador. Ejecuta con -SiteUrl https://tu-dominio o cambia config.json antes de publicar.' }
