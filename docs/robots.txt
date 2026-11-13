@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://benaliyousef-hub.github.io/sitemap.xml
+Sitemap: https://vatimetro.es/sitemap.xml
