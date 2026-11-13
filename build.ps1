@@ -4,7 +4,9 @@
 param([string]$SiteUrl = '')
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$dist = Join-Path $root 'docs'
+$final = Join-Path $root 'docs'
+# Build into a temp folder and mirror it over docs/ at the end, so a failed build never leaves docs/ half-deleted.
+$dist = Join-Path $root 'docs.new'
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 $es = [System.Globalization.CultureInfo]::GetCultureInfo('es-ES')
 $inv = [System.Globalization.CultureInfo]::InvariantCulture
@@ -298,6 +300,11 @@ Copy-Item -Recurse -Force (Join-Path $root 'assets') (Join-Path $dist 'assets')
 Copy-Item -Force (Join-Path $root 'assets\favicon.svg') (Join-Path $dist 'favicon.svg')
 # Files in static/ are copied verbatim to the site root (e.g. search engine verification files).
 if (Test-Path (Join-Path $root 'static')) { Copy-Item -Force (Join-Path $root 'static\*') $dist }
+
+robocopy $dist $final /MIR /NFL /NDL /NJH /NJS /NP /R:5 /W:2 | Out-Null
+if ($LASTEXITCODE -ge 8) { throw "No se pudo copiar el sitio a docs (robocopy $LASTEXITCODE)" }
+$global:LASTEXITCODE = 0
+Remove-Item -Recurse -Force $dist -ErrorAction SilentlyContinue
 
 Write-Output ("OK: " + $sitemap.Count + " paginas indexables, " + $aparatos.Count + " aparatos, " + $guias.Count + " guias -> docs")
 if ($site -like '*.example*') { Write-Output 'AVISO: siteUrl es un marcador. Ejecuta con -SiteUrl https://tu-dominio o cambia config.json antes de publicar.' }
