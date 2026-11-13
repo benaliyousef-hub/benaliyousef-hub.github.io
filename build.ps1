@@ -83,7 +83,7 @@ if ($adsId) {
 function Shop([string]$extra) {
   if (-not $amzTag) { return '' }
   $u = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$cfg.textos.amazonMedidorBusqueda) + '&amp;tag=' + $amzTag
-  return '<aside class="shop"><h2>' + $cfg.textos.amazonTitulo + '</h2><p>' + $cfg.textos.amazonTexto + '</p><p class="shop-links"><a rel="sponsored nofollow noopener" target="_blank" href="' + $u + '">' + $cfg.textos.amazonMedidor + '</a>' + $extra + '</p><p class="note">' + $cfg.textos.amazonAviso + '</p></aside>'
+  return '<aside class="shop"><span class="shop-ico">' + (Icon 'enchufe') + '</span><div class="shop-body"><h2>' + $cfg.textos.amazonTitulo + '</h2><p>' + $cfg.textos.amazonTexto + '</p><p class="shop-links"><a rel="sponsored nofollow noopener" target="_blank" href="' + $u + '">' + $cfg.textos.amazonMedidor + '</a>' + $extra + '</p><p class="note">' + $cfg.textos.amazonAviso + '</p></div></aside>'
 }
 
 function T([string]$key, $map) {
@@ -116,7 +116,7 @@ function Calc($a, [string]$lvl) {
 function CatOf($a) { return ($cats | Where-Object { $_.slug -eq $a.cat } | Select-Object -First 1) }
 function Card($a) {
   $c = Calc $a 'Typ'
-  return '<a class="card" href="/cuanto-gasta/' + $a.slug + '/" data-name="' + (Esc $a.nombre) + '"><span class="card-t">' + (Esc (Cap $a.nombre)) + '</span><span class="card-n">&asymp; ' + (Eur $c.eurAno) + ' &euro;/a&ntilde;o</span><span class="card-s">' + $c.pot + ' &middot; ' + (Kwh $c.kwhAno) + ' kWh/a&ntilde;o</span></a>'
+  return '<a class="card" href="/cuanto-gasta/' + $a.slug + '/" data-name="' + (Esc $a.nombre) + '"><span class="card-t">' + (Esc (Cap $a.nombre)) + '</span><span class="card-n">&asymp; ' + (Eur $c.eurAno) + ' &euro;/a&ntilde;o</span><span class="card-s">' + $c.pot + ' &middot; ' + (Kwh $c.kwhAno) + ' kWh/a&ntilde;o</span>' + (Bar $c.eurAno) + '</a>'
 }
 function RowsTabla($list) {
   $sb = New-Object System.Text.StringBuilder
@@ -179,6 +179,27 @@ function Render($o) {
   if (-not $o.noindex) { $lm = $hoy; if ($o.lastmod) { $lm = $o.lastmod }; [void]$sitemap.Add(@{ loc = $site + $path; lastmod = $lm }) }
 }
 
+# ---------- visual helpers ----------
+$ordenAll = @($aparatos | Sort-Object { (Calc $_ 'Typ').eurAno } -Descending)
+$maxAno = [double](Calc $ordenAll[0] 'Typ').eurAno
+function Pct($v) {
+  if ($maxAno -le 0) { return 0 }
+  return [int][math]::Min(100, [math]::Max(2, [math]::Round(100 * [double]$v / $maxAno)))
+}
+function Bar($v) { return '<span class="bar" aria-hidden="true"><i style="width:' + (Pct $v) + '%"></i></span>' }
+$Iconos = @{
+  climatizacion = '<path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v8"/>'
+  cocina = '<path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 10h20M9 6V4M15 6V4M12 6V3"/>'
+  limpieza = '<rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M7.5 6.5h.01M10.5 6.5h.01"/>'
+  electronica = '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>'
+  exterior = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'
+  guia = '<path d="M5 4h13a1 1 0 0 1 1 1v15H7a2 2 0 0 1-2-2z"/><path d="M9 8h6M9 12h6"/>'
+  enchufe = '<path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0zM12 17v5"/>'
+}
+function Icon([string]$k) {
+  return '<svg class="ico" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + $Iconos[$k] + '</svg>'
+}
+
 # ---------- clean ----------
 if (Test-Path $dist) { Remove-Item -Recurse -Force $dist }
 New-Item -ItemType Directory -Force -Path $dist | Out-Null
@@ -206,7 +227,7 @@ foreach ($a in $aparatos) {
   if ([double]$a.dias -lt 365) { $nota = T 'notaDias' $base }
   $tabla = ''
   foreach ($r in @(@{ n = 'Bajo'; c = $lo }, @{ n = 'Habitual'; c = $ty }, @{ n = 'Alto'; c = $hi })) {
-    $tabla += '<tr><th scope="row">' + $r.n + '</th><td>' + $r.c.pot + '</td><td>' + (Kwh $r.c.kwhDia) + ' kWh</td><td>' + (Eur $r.c.unit) + ' &euro;</td><td>' + (Eur $r.c.eurMes) + ' &euro;</td><td><strong>' + (Eur $r.c.eurAno) + ' &euro;</strong></td></tr>'
+    $tabla += '<tr' + $(if ($r.n -eq 'Habitual') { ' class="hl"' } else { '' }) + '><th scope="row">' + $r.n + '</th><td>' + $r.c.pot + '</td><td>' + (Kwh $r.c.kwhDia) + ' kWh</td><td>' + (Eur $r.c.unit) + ' &euro;</td><td>' + (Eur $r.c.eurMes) + ' &euro;</td><td><strong>' + (Eur $r.c.eurAno) + ' &euro;</strong></td></tr>'
   }
   $factores = ''; foreach ($x in $a.factores) { $factores += '<li>' + (Esc $x) + '</li>' }
   $consejos = ''; foreach ($x in $a.consejos) { $consejos += '<li>' + (Esc $x) + '</li>' }
@@ -215,6 +236,8 @@ foreach ($a in $aparatos) {
     $u1 = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$a.compra) + '&amp;tag=' + $amzTag
     $amazon = Shop ('<a rel="sponsored nofollow noopener" target="_blank" href="' + $u1 + '">' + (T 'amazonAparato' $base) + '</a>')
   }
+  $posA = 0; for ($i = 0; $i -lt $ordenAll.Count; $i++) { if ($ordenAll[$i].slug -eq $a.slug) { $posA = $i + 1 } }
+  $medidor = '<div class="meter"><div class="meter-top"><span>' + $cfg.textos.medidorTitulo + '</span><strong>' + (T 'medidorPuesto' @{ pos = $posA; total = $ordenAll.Count }) + '</strong></div>' + (Bar $ty.eurAno) + '<p class="note">' + (T 'medidorNota' @{ maxNombre = (Esc $ordenAll[0].nombre) }) + '</p></div>'
   $rel = ''
   foreach ($o in @($aparatos | Where-Object { $_.cat -eq $a.cat -and $_.slug -ne $a.slug } | Select-Object -First 6)) { $rel += (Card $o) }
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = 'Aparatos'; u = '/cuanto-gasta/' }, @{ n = $cat.nombre; u = '/categoria/' + $cat.slug + '/' }, @{ n = (Cap $a.nombre) })
@@ -226,7 +249,7 @@ foreach ($a in $aparatos) {
     bread = $cr.html; catSlug = $cat.slug; catNombre = (Esc $cat.nombre); h1 = (Esc $h1); respuesta = $respuesta
     fechaIso = $a.fecha; fecha = (FechaLarga $a.fecha); calc = (CalcHtml $a ''); nombreCap = (Esc (Cap $a.nombre)); nombre = (Esc $a.nombre)
     colPot = $colPot; unidad = $unidad; tabla = $tabla; nota = $nota; intro = (Esc $a.intro); factores = $factores
-    formula = $formula; cargaNota = $cargaNota; consejos = $consejos; amazon = $amazon; faq = (FaqHtml $a.faq); relacionados = $rel
+    formula = $formula; cargaNota = $cargaNota; consejos = $consejos; amazon = $amazon; faq = (FaqHtml $a.faq); relacionados = $rel; medidor = $medidor; catIcon = (Icon $cat.slug)
   }
   Render @{ rel = "cuanto-gasta\$($a.slug)\index.html"; title = $title; rawTitle = $true; desc = $desc; content = $content; lastmod = $a.fecha
     jsonld = ($cr.ld + (ArticleLd $h1 $desc $url $a.fecha) + (FaqLd $a.faq)) }
@@ -237,15 +260,15 @@ $orden = @($aparatos | Sort-Object { (Calc $_ 'Typ').eurAno } -Descending)
 $ranking = ''; $pos = 0
 foreach ($a in @($orden | Select-Object -First 10)) {
   $pos++; $c = Calc $a 'Typ'
-  $ranking += '<tr><td class="pos">' + $pos + '</td><th scope="row"><a href="/cuanto-gasta/' + $a.slug + '/">' + (Esc (Cap $a.nombre)) + '</a></th><td>' + (Kwh $c.kwhAno) + ' kWh</td><td><strong>' + (Eur $c.eurAno) + ' &euro;</strong></td></tr>'
+  $ranking += '<tr><td class="pos">' + $pos + '</td><th scope="row"><a href="/cuanto-gasta/' + $a.slug + '/">' + (Esc (Cap $a.nombre)) + '</a>' + (Bar $c.eurAno) + '</th><td>' + (Kwh $c.kwhAno) + ' kWh</td><td><strong>' + (Eur $c.eurAno) + ' &euro;</strong></td></tr>'
 }
 $catTiles = ''
 foreach ($cat in $cats) {
   $n = @($aparatos | Where-Object { $_.cat -eq $cat.slug }).Count
-  $catTiles += '<a class="tile" href="/categoria/' + $cat.slug + '/"><span class="tile-t">' + (Esc $cat.nombre) + '</span><span class="tile-s">' + (Esc $cat.desc) + '</span><span class="tile-n">' + $n + ' aparatos &rarr;</span></a>'
+  $catTiles += '<a class="tile" href="/categoria/' + $cat.slug + '/"><span class="tile-ico">' + (Icon $cat.slug) + '</span><span class="tile-t">' + (Esc $cat.nombre) + '</span><span class="tile-s">' + (Esc $cat.desc) + '</span><span class="tile-n">' + $n + ' aparatos &rarr;</span></a>'
 }
 $guiaCards = ''
-foreach ($g in $guias) { $guiaCards += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>' }
+foreach ($g in $guias) { $guiaCards += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="tile-ico">' + (Icon 'guia') + '</span><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>' }
 $alfab = @($aparatos | Sort-Object nombre)
 $appData = @(foreach ($a in $alfab) {
   if ($a.modo -eq 'ciclo') { [ordered]@{ s = $a.slug; n = (Cap $a.nombre); m = 'ciclo'; kwh = [double]$a.kwhTyp; usos = [double]$a.usos; dias = [double]$a.dias } }
@@ -263,7 +286,7 @@ $body = '<p class="filter"><label for="filtro">Busca un aparato</label><input id
 foreach ($cat in $cats) {
   $items = @($aparatos | Where-Object { $_.cat -eq $cat.slug })
   $cards = ''; foreach ($a in $items) { $cards += (Card $a) }
-  $body += '<section class="cat-block"><h2><a href="/categoria/' + $cat.slug + '/">' + (Esc $cat.nombre) + '</a></h2><div class="cards">' + $cards + '</div></section>'
+  $body += '<section class="cat-block"><h2><a href="/categoria/' + $cat.slug + '/">' + (Icon $cat.slug) + (Esc $cat.nombre) + '</a></h2><div class="cards">' + $cards + '</div></section>'
 }
 $body += '<section><h2>' + $cfg.textos.hubTablaTitulo + '</h2>' + (TablaAparatos $alfab) + '<p class="note">' + $cfg.textos.notaTabla + '</p></section>'
 $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = 'Aparatos' })
@@ -284,7 +307,7 @@ foreach ($cat in $cats) {
 # ---------- guides ----------
 $gl = ''
 foreach ($g in $guias) {
-  $gl += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>'
+  $gl += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="tile-ico">' + (Icon 'guia') + '</span><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>'
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = $cfg.textos.crumbGuias; u = '/guias/' }, @{ n = $g.titulo })
   $url = $site + '/guias/' + $g.slug + '/'
   $bodyG = (ReadText ("data\guias\" + $g.slug + '.html')) + (Shop '')
