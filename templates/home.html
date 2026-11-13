@@ -1,42 +1,47 @@
 <section class="hero">
   <div class="wrap hero-in">
     <div class="hero-text">
-      <p class="eyebrow">Consumo eléctrico, sin letra pequeña</p>
+      <p class="eyebrow">Calculadora de consumo eléctrico</p>
       <h1>¿Cuánto gasta cada aparato de tu casa?</h1>
-      <p class="lead">Elige un aparato, pon el precio de tu factura y verás al momento lo que consume en kWh y lo que te cuesta en euros al día, al mes y al año.</p>
-      <p class="hero-links"><a class="btn" href="/cuanto-gasta/">Ver los {{total}} aparatos</a><a class="link" href="/metodologia/">Cómo hacemos las cuentas</a></p>
+      <p class="lead">Elige un aparato y mira lo que te cuesta al día, al mes y al año.</p>
+      <p class="hero-links"><a class="btn" href="/cuanto-gasta/">Ver los {{total}} aparatos</a></p>
       <ul class="hero-facts">
-        <li><strong>{{total}}</strong> aparatos analizados</li>
-        <li><strong>kWh y €</strong> al día, al mes y al año</li>
-        <li><strong>Sin registro</strong> ni datos personales</li>
+        <li><strong>{{total}}</strong> aparatos</li>
+        <li><strong>Gratis</strong></li>
+        <li><strong>Sin registro</strong></li>
       </ul>
     </div>
-    <div class="hero-calc">
-      <h2>Calculadora de consumo</h2>
-      {{calc}}
+    <div class="hero-stage">
+      <span class="float f1" aria-hidden="true">💡</span>
+      <span class="float f2" aria-hidden="true">🧺</span>
+      <span class="float f3" aria-hidden="true">❄️</span>
+      <span class="float f4" aria-hidden="true">📺</span>
+      <div class="hero-calc">
+        <h2>Calcula tu gasto</h2>
+        {{calc}}
+      </div>
     </div>
   </div>
 </section>
 
 <section class="wrap block">
-  <h2>Los aparatos que más gastan al año</h2>
-  <p>Ordenados por coste anual con un uso habitual y la luz a {{precio}} €/kWh. Casi siempre ganan los que producen calor o frío durante muchas horas.</p>
+  <h2>Los 10 aparatos que más gastan</h2>
   <div class="table-wrap">
     <table class="rank">
       <thead><tr><th scope="col">#</th><th scope="col">Aparato</th><th scope="col">kWh al año</th><th scope="col">Coste al año</th></tr></thead>
       <tbody>{{ranking}}</tbody>
     </table>
   </div>
-  <p class="note">Estimaciones con valores habituales de potencia y uso. Entra en cada aparato para ajustarlas a tu caso.</p>
+  <p class="note">Uso habitual, con la luz a {{precio}} €/kWh.</p>
 </section>
 
 <section class="wrap block">
-  <h2>Busca por tipo de aparato</h2>
+  <h2>Busca por tipo</h2>
   <div class="tiles">{{categorias}}</div>
 </section>
 
 <section class="wrap block">
-  <h2>Guías para entender tu consumo</h2>
+  <h2>Guías rápidas</h2>
   <div class="tiles">{{guias}}</div>
 </section>
 
