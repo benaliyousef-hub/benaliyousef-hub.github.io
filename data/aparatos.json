@@ -658,5 +658,25 @@
       { "q": "¿Cuántas horas debe funcionar la depuradora?", "a": "Una regla habitual es dividir la temperatura del agua entre dos: con el agua a 26 °C, unas 13 horas en pleno verano, y bastantes menos al principio y al final de la temporada. El objetivo es mover todo el volumen de la piscina al menos una vez al día." },
       { "q": "¿Hay que tenerla encendida en invierno?", "a": "Si la piscina se hiberna con cobertor y producto de invernaje, basta con una o dos horas algunos días, o nada, según el método elegido." }
     ]
+  },
+  {
+    "slug": "emisor-termico", "art": "un", "nombre": "emisor térmico", "cat": "climatizacion", "modo": "potencia",
+    "wMin": 500, "wTyp": 1000, "wMax": 1500, "factor": 0.5, "horas": 6, "dias": 120, "fecha": "2026-11-13",
+    "compra": "emisor térmico bajo consumo programable",
+    "intro": "Un emisor térmico es un radiador eléctrico fijo, de pared, con una resistencia que calienta un fluido o un bloque cerámico. Su potencia depende del número de elementos: cada uno aporta unos 110 a 125 W, así que los modelos domésticos van de 500 a 1.500 W. El termostato lo enciende y lo apaga para mantener la temperatura, de modo que solo trabaja una parte del tiempo que está conectado.",
+    "factores": [
+      "La potencia instalada frente al tamaño de la habitación: la referencia habitual es de 80 a 100 W por metro cuadrado.",
+      "La temperatura que marques y el aislamiento de la vivienda, que deciden qué parte del tiempo está calentando la resistencia.",
+      "Cuántos emisores tienes encendidos a la vez y durante cuántas horas: el gasto de cada uno se suma."
+    ],
+    "consejos": [
+      "Usa el programador para calentar solo las habitaciones ocupadas y solo en las horas en que se usan.",
+      "Mantén la consigna en torno a 19-21 °C de día y bájala por la noche: cada grado de más sube el consumo alrededor de un 7 %.",
+      "No lo tapes con ropa, muebles ni cortinas: calienta peor, trabaja más tiempo y puede sobrecalentarse."
+    ],
+    "faq": [
+      { "q": "¿Existen los emisores térmicos de bajo consumo?", "a": "No en sentido estricto. Como cualquier calefacción por resistencia, convierte cada kWh de electricidad en 1 kWh de calor, ni más ni menos. Lo que ahorra es un buen termostato y la programación, que evitan calentar de más. Una bomba de calor sí da entre 3 y 4 kWh de calor por cada kWh eléctrico." },
+      { "q": "¿Qué gasta menos, un emisor térmico o un radiador de aceite?", "a": "A igual potencia y con el mismo calor aportado, gastan lo mismo. El emisor suele tener un termostato electrónico más preciso y programación horaria, y eso puede reducir algo el consumo real frente a un radiador de aceite con rueda mecánica." }
+    ]
   }
 ]
