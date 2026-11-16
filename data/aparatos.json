@@ -755,5 +755,45 @@
         "a": "Uno de 500 W con termostato puede consumir entre 6 y 9 kWh en 24 horas, y uno sin termostato llega a 12 kWh. Es varias veces lo que gasta usándolo solo dos o tres horas, por eso compensa ponerle un programador."
       }
     ]
+  },
+  {
+    "slug": "monitor", "art": "un", "nombre": "monitor", "cat": "electronica", "modo": "potencia", "emoji": "🖥️",
+    "wMin": 15, "wTyp": 30, "wMax": 60, "factor": 1, "horas": 6, "dias": 365, "fecha": "2026-11-16",
+    "compra": "monitor eficiente bajo consumo 27 pulgadas",
+    "intro": "Un monitor LED de oficina de 24 a 27 pulgadas consume entre 15 y 30 W encendido. Los modelos grandes, de alta resolución o pensados para juegos, con mucho brillo y alta frecuencia de refresco, suben hasta unos 60 W. En reposo casi todos bajan de 1 W.",
+    "factores": [
+      "El tamaño y la resolución: a más pulgadas y más píxeles, más consumo.",
+      "El brillo, que es el ajuste que más influye; al máximo puede gastar casi el doble que a la mitad.",
+      "Las funciones activas, como el HDR o una frecuencia de refresco alta, que elevan el consumo."
+    ],
+    "consejos": [
+      "Baja el brillo a un nivel cómodo: es el ahorro más directo y además cansa menos la vista.",
+      "Configura el ordenador para que apague la pantalla tras unos minutos sin uso.",
+      "Si tienes dos monitores, apaga el que no estés usando; el segundo gasta lo mismo aunque solo muestre el escritorio."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un monitor encendido todo el día?", "a": "Uno de 30 W consume 0,72 kWh en 24 horas. Con el salvapantallas sigue gastando lo mismo; solo baja de verdad cuando la pantalla entra en reposo y se apaga la retroiluminación." },
+      { "q": "¿Gasta más un monitor o un televisor?", "a": "Normalmente el televisor, porque es bastante más grande y brilla más: un televisor de 55 pulgadas ronda los 60 a 120 W, frente a los 15 a 30 W de un monitor de oficina." }
+    ]
+  },
+  {
+    "slug": "campana-extractora", "art": "una", "nombre": "campana extractora", "cat": "cocina", "modo": "potencia", "emoji": "💨",
+    "wMin": 80, "wTyp": 150, "wMax": 250, "factor": 1, "horas": 1, "dias": 365, "fecha": "2026-11-16",
+    "compra": "campana extractora eficiente clase A luces LED",
+    "intro": "Una campana extractora doméstica consume entre 80 y 250 W contando el motor y las luces. El motor se lleva la mayor parte y depende de la velocidad elegida; la iluminación supone unos pocos vatios si es LED y bastante más si aún lleva halógenos.",
+    "factores": [
+      "La velocidad del motor: en la más alta puede gastar el doble que en la más baja.",
+      "El tipo de luces: dos halógenos antiguos suman 40 a 80 W, mientras que dos LED no pasan de 10 W.",
+      "El tiempo que la dejas funcionando después de cocinar."
+    ],
+    "consejos": [
+      "Usa la velocidad media para cocinar a diario y reserva la máxima para frituras o planchas.",
+      "Limpia o cambia los filtros de grasa con regularidad: con el filtro saturado extrae menos y hay que subir la velocidad.",
+      "Si lleva halógenos, cámbialos por bombillas LED del mismo casquillo."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una campana extractora por hora?", "a": "Entre 0,08 y 0,25 kWh según la velocidad y las luces. Una campana de 150 W consume 0,15 kWh en una hora de uso." },
+      { "q": "¿Gasta mucho la campana comparada con la placa?", "a": "No. Mientras la campana pide unos 150 W, una vitrocerámica o una placa de inducción usan entre 1.000 y 2.000 W por fuego. La campana supone una parte muy pequeña del gasto de cocinar." }
+    ]
   }
 ]
