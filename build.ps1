@@ -80,10 +80,18 @@ if ($adsId) {
   $Globales.adsense = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + $adsId + '" crossorigin="anonymous"></script>'
   $Globales.cookies = [string]$cfg.textos.cookiesAds
 }
-function Shop([string]$extra) {
+function Prod([string]$e, [string]$t, [string]$s, [string]$q) {
+  $u = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString($q) + '&amp;tag=' + $amzTag
+  return '<a class="tile prod" rel="sponsored nofollow noopener" target="_blank" href="' + $u + '"><span class="emo" aria-hidden="true">' + $e + '</span><span class="tile-t">' + (Esc $t) + '</span><span class="tile-s">' + (Esc $s) + '</span><span class="tile-n">' + $cfg.textos.tiendaVer + ' &rarr;</span></a>'
+}
+# Affiliate product grid: optional first card, the consumption meter, then the list for $key (a category slug or 'general').
+function Tienda([string]$key, [string]$first) {
   if (-not $amzTag) { return '' }
-  $u = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$cfg.textos.amazonMedidorBusqueda) + '&amp;tag=' + $amzTag
-  return '<aside class="shop"><span class="shop-ico">' + (Icon 'enchufe') + '</span><div class="shop-body"><h2>' + $cfg.textos.amazonTitulo + '</h2><p>' + $cfg.textos.amazonTexto + '</p><p class="shop-links"><a rel="sponsored nofollow noopener" target="_blank" href="' + $u + '">' + $cfg.textos.amazonMedidor + '</a>' + $extra + '</p><p class="note">' + $cfg.textos.amazonAviso + '</p></div></aside>'
+  $h = $first + (Prod '&#128268;' ([string]$cfg.textos.tiendaMedidorT) ([string]$cfg.textos.tiendaMedidorS) ([string]$cfg.textos.amazonMedidorBusqueda))
+  $lista = $cfg.tienda.$key
+  if (-not $lista) { $lista = $cfg.tienda.general }
+  foreach ($p in $lista) { $h += (Prod ([string]$p.e) ([string]$p.t) ([string]$p.s) ([string]$p.q)) }
+  return '<section class="tienda"><h2>' + $cfg.textos.tiendaTitulo + '</h2><div class="tiles prods">' + $h + '</div><p class="note">' + $cfg.textos.amazonAviso + '</p></section>'
 }
 
 function T([string]$key, $map) {
@@ -245,8 +253,7 @@ foreach ($a in $aparatos) {
   $consejos = ''; foreach ($x in $a.consejos) { $consejos += '<li>' + (Esc $x) + '</li>' }
   $amazon = ''
   if ($amzTag) {
-    $u1 = 'https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$a.compra) + '&amp;tag=' + $amzTag
-    $amazon = Shop ('<a rel="sponsored nofollow noopener" target="_blank" href="' + $u1 + '">' + (T 'amazonAparato' $base) + '</a>')
+    $amazon = Tienda $cat.slug (Prod (Emo $a) (T 'tiendaAparatoT' @{ nombre = $a.nombre }) ([string]$cfg.textos.tiendaAparatoS) ([string]$a.compra))
   }
   $posA = 0; for ($i = 0; $i -lt $ordenAll.Count; $i++) { if ($ordenAll[$i].slug -eq $a.slug) { $posA = $i + 1 } }
   $medidor = '<div class="meter"><div class="meter-top"><span>' + $cfg.textos.medidorTitulo + '</span><strong>' + (T 'medidorPuesto' @{ pos = $posA; total = $ordenAll.Count }) + '</strong></div>' + (Bar $ty.eurAno) + '<p class="note">' + (T 'medidorNota' @{ maxNombre = (Esc $ordenAll[0].nombre) }) + '</p></div>'
@@ -290,7 +297,7 @@ $appData = @(foreach ($a in $alfab) {
 $first = $orden[0]
 $selector = '<label class="calc-select">Aparato<select id="aparato-select" data-initial="' + $first.slug + '"></select></label><script type="application/json" id="aparatos-data">' + ($appData | ConvertTo-Json -Depth 4 -Compress) + '</script>'
 $homeFaq = @($cfg.homeFaq | ForEach-Object { $_ })
-$homeContent = Fill $tplHome @{ calc = (CalcHtml $first $selector); ranking = $ranking; categorias = $catTiles; guias = $guiaCards; faq = (FaqHtml $homeFaq) }
+$homeContent = Fill $tplHome @{ calc = (CalcHtml $first $selector); ranking = $ranking; categorias = $catTiles; guias = $guiaCards; faq = (FaqHtml $homeFaq); tienda = (Tienda 'general' '') }
 $webLd = Ld ([ordered]@{ '@context' = 'https://schema.org'; '@type' = 'WebSite'; name = $cfg.nombre; url = $site + '/'; inLanguage = 'es'; description = $cfg.lema })
 Render @{ rel = 'index.html'; title = (T 'tituloHome' @{ anio = $anio }); rawTitle = $true; desc = (T 'descHome' @{ total = $aparatos.Count }); content = $homeContent; ogType = 'website'; jsonld = ($webLd + (FaqLd $homeFaq)) }
 
@@ -310,7 +317,7 @@ Render @{ rel = 'cuanto-gasta\index.html'; title = (T 'tituloHub' @{ anio = $ani
 foreach ($cat in $cats) {
   $items = @($aparatos | Where-Object { $_.cat -eq $cat.slug } | Sort-Object { (Calc $_ 'Typ').eurAno } -Descending)
   $cards = ''; foreach ($a in $items) { $cards += (Card $a) }
-  $body = '<div class="cards">' + $cards + '</div><section><h2>' + $cfg.textos.catTablaTitulo + '</h2>' + (TablaAparatos $items) + '<p class="note">' + $cfg.textos.notaTabla + '</p></section>'
+  $body = '<div class="cards">' + $cards + '</div><section><h2>' + $cfg.textos.catTablaTitulo + '</h2>' + (TablaAparatos $items) + '<p class="note">' + $cfg.textos.notaTabla + '</p></section>' + (Tienda $cat.slug '')
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = 'Aparatos'; u = '/cuanto-gasta/' }, @{ n = $cat.nombre })
   $lm = ($items | ForEach-Object { $_.fecha } | Sort-Object | Select-Object -Last 1)
   Render @{ rel = "categoria\$($cat.slug)\index.html"; title = (T 'tituloCat' @{ cat = $cat.nombre; anio = $anio }); desc = $cat.meta; jsonld = $cr.ld; lastmod = $lm
@@ -323,7 +330,7 @@ foreach ($g in $guias) {
   $gl += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="emo" aria-hidden="true">&#128216;</span><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>'
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = $cfg.textos.crumbGuias; u = '/guias/' }, @{ n = $g.titulo })
   $url = $site + '/guias/' + $g.slug + '/'
-  $bodyG = (ReadText ("data\guias\" + $g.slug + '.html')) + (Shop '')
+  $bodyG = (ReadText ("data\guias\" + $g.slug + '.html')) + (Tienda 'general' '')
   Render @{ rel = "guias\$($g.slug)\index.html"; title = $g.titulo; desc = $g.desc; lastmod = $g.fecha; jsonld = ($cr.ld + (ArticleLd $g.titulo $g.desc $url $g.fecha))
     content = (Fill $tplTexto @{ bread = $cr.html; h1 = (Esc $g.titulo); meta = ('Actualizado el <time datetime="' + $g.fecha + '">' + (FechaLarga $g.fecha) + '</time>'); body = $bodyG }) }
 }
