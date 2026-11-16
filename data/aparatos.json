@@ -718,5 +718,42 @@
       { "q": "¿Cuánto gasta una estufa eléctrica por hora?", "a": "Depende de las barras encendidas: con una barra de 400 W consume 0,4 kWh por hora, con dos 0,8 kWh y con tres 1,2 kWh. Multiplica los kWh por tu precio de la luz para obtener el coste." },
       { "q": "¿Qué gasta más, una estufa eléctrica o un radiador de aceite?", "a": "A plena potencia suele gastar más el radiador de aceite, que tiene entre 1.000 y 2.500 W frente a los 400 a 1.200 W de una estufa de barras. Pero el radiador lleva termostato y calienta toda la habitación, mientras que la estufa solo calienta lo que tiene delante." }
     ]
+  },
+  {
+    "slug": "toallero-electrico",
+    "art": "un",
+    "nombre": "toallero eléctrico",
+    "cat": "climatizacion",
+    "modo": "potencia",
+    "emoji": "🛁",
+    "wMin": 300,
+    "wTyp": 500,
+    "wMax": 750,
+    "factor": 0.7,
+    "horas": 3,
+    "dias": 150,
+    "fecha": "2026-11-16",
+    "compra": "toallero eléctrico bajo consumo con termostato y programador",
+    "intro": "Un toallero eléctrico es un radiador de baño de poca potencia, normalmente entre 300 y 750 W según su tamaño. Los que llevan termostato cortan la resistencia al alcanzar la temperatura, así que de media consumen menos de lo que marca la placa; los más sencillos, sin termostato, gastan toda su potencia mientras están encendidos.",
+    "factores": [
+      "La potencia del modelo, que va ligada a su tamaño: uno de 300 W gasta menos de la mitad que uno de 750 W.",
+      "Las horas de encendido: es fácil olvidarlo conectado todo el día porque no hace ruido ni da sensación de gasto.",
+      "Las toallas que lo cubren: tapado por completo retiene el calor y tarda más en templar el baño."
+    ],
+    "consejos": [
+      "Prográmalo para que se encienda un rato antes de la ducha y se apague solo después, en lugar de dejarlo siempre conectado.",
+      "Elige la potencia según el tamaño del baño: para uno pequeño bastan 300 a 500 W.",
+      "Cierra la puerta del baño mientras funciona; con tan poca potencia, el calor que se escapa al pasillo no se recupera."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuánto gasta un toallero eléctrico por hora?",
+        "a": "Como máximo, su potencia: uno de 500 W consume 0,5 kWh en una hora a pleno rendimiento. Si tiene termostato y el baño ya está templado, la media baja a unos 0,3 o 0,4 kWh por hora."
+      },
+      {
+        "q": "¿Cuánto gasta un toallero eléctrico encendido todo el día?",
+        "a": "Uno de 500 W con termostato puede consumir entre 6 y 9 kWh en 24 horas, y uno sin termostato llega a 12 kWh. Es varias veces lo que gasta usándolo solo dos o tres horas, por eso compensa ponerle un programador."
+      }
+    ]
   }
 ]
