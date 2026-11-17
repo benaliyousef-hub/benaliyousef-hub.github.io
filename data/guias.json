@@ -16,5 +16,23 @@
     "titulo": "Etiqueta energética: cómo leerla y calcular lo que te costará",
     "desc": "Qué significan las letras de la A a la G, dónde está el dato de kWh y cómo convertirlo en euros al año antes de comprar.",
     "fecha": "2026-11-12"
+  },
+  {
+    "slug": "que-aparatos-gastan-mas-luz",
+    "titulo": "Qué aparatos gastan más luz en casa",
+    "desc": "Los electrodomésticos que más consumen al año, por qué, cuáles gastan menos de lo que parece y por dónde empezar a ahorrar.",
+    "fecha": "2026-11-16"
+  },
+  {
+    "slug": "que-calefaccion-electrica-gasta-menos",
+    "titulo": "Qué calefacción eléctrica gasta menos",
+    "desc": "Calefactor, radiador de aceite, emisor térmico, brasero, estufa o bomba de calor: cuál consume menos y cuál conviene según el uso.",
+    "fecha": "2026-11-16"
+  },
+  {
+    "slug": "potencia-contratada-que-aparatos-usar-a-la-vez",
+    "titulo": "Potencia contratada: qué aparatos puedes usar a la vez",
+    "desc": "Cómo saber si te saltará la luz con 3,45, 4,6 o 5,75 kW, la potencia de cada electrodoméstico y cuándo compensa bajarla.",
+    "fecha": "2026-11-16"
   }
 ]
