@@ -795,5 +795,27 @@
       { "q": "¿Cuánto gasta una campana extractora por hora?", "a": "Entre 0,08 y 0,25 kWh según la velocidad y las luces. Una campana de 150 W consume 0,15 kWh en una hora de uso." },
       { "q": "¿Gasta mucho la campana comparada con la placa?", "a": "No. Mientras la campana pide unos 150 W, una vitrocerámica o una placa de inducción usan entre 1.000 y 2.000 W por fuego. La campana supone una parte muy pequeña del gasto de cocinar." }
     ]
+  },
+  {
+    "slug": "olla-lenta", "art": "una", "nombre": "olla lenta", "cat": "cocina", "modo": "ciclo",
+    "emoji": "🍲",
+    "kwhMin": 0.6, "kwhTyp": 1.2, "kwhMax": 2.0, "usos": 2, "dias": 365,
+    "fecha": "2026-11-18",
+    "compra": "olla de cocción lenta programable",
+    "intro": "Una olla lenta doméstica tiene entre 150 y 350 W de potencia, muy por debajo de los 1.000 a 2.000 W de un fuego de cocina. Como cocina durante seis u ocho horas seguidas, cada guiso acaba consumiendo entre 0,6 y 2 kWh según el tamaño y el nivel elegido.",
+    "factores": [
+      "El nivel de cocción: en bajo suele pedir entre 75 y 150 W y en alto entre 150 y 350 W, aunque en alto la receta termina antes.",
+      "La capacidad: una olla de 6 litros calienta más volumen y tiene más potencia que una de 3.",
+      "Abrir la tapa durante la cocción, que deja escapar el calor y obliga a alargar el tiempo."
+    ],
+    "consejos": [
+      "No levantes la tapa para mirar: el cristal deja ver el guiso y cada apertura retrasa la cocción.",
+      "Llénala entre la mitad y dos tercios de su capacidad; una olla casi vacía gasta casi lo mismo para cocinar mucho menos.",
+      "Prepara raciones dobles y congela la mitad: el consumo por plato baja a la mitad con el mismo tiempo de cocción."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una olla lenta en 8 horas?", "a": "Una olla mediana de unos 200 W consume entre 0,8 y 1,6 kWh en ocho horas, según el nivel elegido y lo que el termostato pare la resistencia. Una olla grande en nivel alto puede acercarse a 2 kWh." },
+      { "q": "¿Gasta más la olla lenta que la vitrocerámica?", "a": "Por hora gasta mucho menos: unos 200 W frente a 1.000 o 2.000 W de un fuego. En un guiso largo el total puede ser parecido, pero la olla lenta suele salir igual o algo mejor que una cazuela al fuego durante horas, y peor que una olla a presión." }
+    ]
   }
 ]
