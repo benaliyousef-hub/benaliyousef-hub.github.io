@@ -461,9 +461,9 @@
   },
   {
     "slug": "televisor", "art": "un", "nombre": "televisor", "cat": "electronica", "modo": "potencia",
-    "wMin": 50, "wTyp": 100, "wMax": 200, "factor": 1, "horas": 4, "dias": 365, "fecha": "2026-11-12",
+    "wMin": 50, "wTyp": 100, "wMax": 200, "factor": 1, "horas": 4, "dias": 365, "fecha": "2026-11-18",
     "compra": "televisor 55 pulgadas eficiente",
-    "intro": "Un televisor actual consume entre 50 y 200 W según el tamaño, la tecnología del panel y el brillo. Uno de 55 pulgadas se mueve en torno a 100 W con contenido normal y bastante más con HDR.",
+    "intro": "Un televisor LED actual consume entre 50 y 200 vatios (W) según el tamaño, la tecnología del panel y el brillo. Uno de 55 pulgadas se mueve en torno a 100 W con contenido normal y bastante más con HDR.",
     "factores": [
       "El tamaño de la pantalla: el consumo crece con la superficie.",
       "El brillo y el modo de imagen; los modos vívidos y el HDR disparan el gasto.",
@@ -475,6 +475,8 @@
       "No lo dejes encendido de fondo: es de los pocos gastos que se eliminan sin perder nada."
     ],
     "faq": [
+      { "q": "¿Cuántos vatios consume un televisor LED según las pulgadas?", "a": "Como referencia, con brillo normal: uno de 32 pulgadas, unos 30 a 40 W; de 43 pulgadas, unos 50 a 60 W; de 55 pulgadas, unos 80 a 100 W; y de 65 pulgadas, unos 110 a 150 W. El dato exacto de tu modelo aparece en la etiqueta energética como consumo en modo encendido." },
+      { "q": "¿Cuántos kWh gasta una tele encendida 4 horas al día?", "a": "Una tele de 100 W encendida 4 horas gasta 0,4 kWh al día, unos 12 kWh al mes y cerca de 146 kWh al año. Una de 50 W gasta justo la mitad." },
       { "q": "¿Cuánto gasta el televisor en standby?", "a": "Los modelos actuales, alrededor de 0,5 W, es decir, unos 4 kWh al año. Puede ser bastante más si dejas activado el encendido rápido o la conexión permanente a la red." },
       { "q": "¿Gasta más un OLED que un LED?", "a": "Depende de la imagen. El OLED consume menos en escenas oscuras y más en las muy claras; a igual tamaño, las cifras medias son parecidas." }
     ]
