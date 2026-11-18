@@ -74,6 +74,14 @@ $amzTag = ([string]$cfg.amazonTag).Trim()
 if ($adsId -and $adsId -notmatch '^ca-pub-\d{16}$') { throw "adsenseId no valido: debe tener la forma ca-pub- seguido de 16 cifras" }
 if ($amzTag -and $amzTag -notmatch '^[A-Za-z0-9][A-Za-z0-9-]*-\d{2}$') { throw "amazonTag no valido: debe tener la forma nombre-21" }
 $Globales.afiliados = $(if ($amzTag) { [string]$cfg.textos.afiliadosNota } else { '' })
+# Electricity-tariff affiliate block. Stays off until tarifasUrl is set in config.json.
+$tarUrl = ([string]$cfg.tarifasUrl).Trim()
+if ($tarUrl -and $tarUrl -notmatch '^https://[^\s"<>]+$') { throw "tarifasUrl no valido: debe empezar por https:// y no contener espacios" }
+if ($tarUrl) { $Globales.afiliados += [string]$cfg.textos.tarifasNotaLegal }
+function Tarifas {
+  if (-not $tarUrl) { return '' }
+  return '<aside class="tarifas"><span class="emo" aria-hidden="true">&#128161;</span><div class="tarifas-body"><h2>' + $cfg.textos.tarifasTitulo + '</h2><p>' + $cfg.textos.tarifasTexto + '</p><p><a class="btn" rel="sponsored nofollow noopener" target="_blank" href="' + (Esc $tarUrl) + '">' + $cfg.textos.tarifasBoton + '</a></p><p class="note">' + $cfg.textos.tarifasAviso + '</p></div></aside>'
+}
 $Globales.adsense = ''
 $Globales.cookies = [string]$cfg.textos.cookiesSin
 if ($adsId) {
@@ -268,7 +276,7 @@ foreach ($a in $aparatos) {
     bread = $cr.html; catSlug = $cat.slug; catNombre = (Esc $cat.nombre); h1 = (Esc $h1); respuesta = $respuesta
     fechaIso = $a.fecha; fecha = (FechaLarga $a.fecha); calc = (CalcHtml $a ''); nombreCap = (Esc (Cap $a.nombre)); nombre = (Esc $a.nombre)
     colPot = $colPot; unidad = $unidad; tabla = $tabla; nota = $nota; intro = (Esc $a.intro); factores = $factores
-    formula = $formula; cargaNota = $cargaNota; consejos = $consejos; amazon = $amazon; faq = (FaqHtml $a.faq); relacionados = $rel; medidor = $medidor; catIcon = (Icon $cat.slug); emoji = (Emo $a); art = $a.art
+    formula = $formula; cargaNota = $cargaNota; consejos = $consejos; amazon = $amazon; tarifas = (Tarifas); faq = (FaqHtml $a.faq); relacionados = $rel; medidor = $medidor; catIcon = (Icon $cat.slug); emoji = (Emo $a); art = $a.art
     stats = ('<div class="stat"><span>' + $(if ($isC) { 'Por uso' } else { 'Por hora' }) + '</span><strong>' + (Eur $ty.unit) + ' &euro;</strong><small>' + $ty.pot + '</small></div><div class="stat"><span>Al mes</span><strong>' + (Eur $ty.eurMes) + ' &euro;</strong><small>' + (Kwh ($ty.kwhDia * 30)) + ' kWh</small></div><div class="stat top"><span>Al a&ntilde;o</span><strong>' + (Eur $ty.eurAno) + ' &euro;</strong><small>' + (Kwh $ty.kwhAno) + ' kWh</small></div>')
   }
   Render @{ rel = "cuanto-gasta\$($a.slug)\index.html"; title = $title; rawTitle = $true; desc = $desc; content = $content; lastmod = $a.fecha
@@ -297,7 +305,7 @@ $appData = @(foreach ($a in $alfab) {
 $first = $orden[0]
 $selector = '<label class="calc-select">Aparato<select id="aparato-select" data-initial="' + $first.slug + '"></select></label><script type="application/json" id="aparatos-data">' + ($appData | ConvertTo-Json -Depth 4 -Compress) + '</script>'
 $homeFaq = @($cfg.homeFaq | ForEach-Object { $_ })
-$homeContent = Fill $tplHome @{ calc = (CalcHtml $first $selector); ranking = $ranking; categorias = $catTiles; guias = $guiaCards; faq = (FaqHtml $homeFaq); tienda = (Tienda 'general' '') }
+$homeContent = Fill $tplHome @{ calc = (CalcHtml $first $selector); ranking = $ranking; categorias = $catTiles; guias = $guiaCards; faq = (FaqHtml $homeFaq); tienda = (Tienda 'general' ''); tarifas = (Tarifas) }
 $webLd = Ld ([ordered]@{ '@context' = 'https://schema.org'; '@type' = 'WebSite'; name = $cfg.nombre; url = $site + '/'; inLanguage = 'es'; description = $cfg.lema })
 Render @{ rel = 'index.html'; title = (T 'tituloHome' @{ anio = $anio }); rawTitle = $true; desc = (T 'descHome' @{ total = $aparatos.Count }); content = $homeContent; ogType = 'website'; jsonld = ($webLd + (FaqLd $homeFaq)) }
 
@@ -330,7 +338,7 @@ foreach ($g in $guias) {
   $gl += '<a class="tile" href="/guias/' + $g.slug + '/"><span class="emo" aria-hidden="true">&#128216;</span><span class="tile-t">' + (Esc $g.titulo) + '</span><span class="tile-s">' + (Esc $g.desc) + '</span><span class="tile-n">Leer la gu&iacute;a &rarr;</span></a>'
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = $cfg.textos.crumbGuias; u = '/guias/' }, @{ n = $g.titulo })
   $url = $site + '/guias/' + $g.slug + '/'
-  $bodyG = (ReadText ("data\guias\" + $g.slug + '.html')) + (Tienda 'general' '')
+  $bodyG = (ReadText ("data\guias\" + $g.slug + '.html')) + (Tarifas) + (Tienda 'general' '')
   Render @{ rel = "guias\$($g.slug)\index.html"; title = $g.titulo; desc = $g.desc; lastmod = $g.fecha; jsonld = ($cr.ld + (ArticleLd $g.titulo $g.desc $url $g.fecha))
     content = (Fill $tplTexto @{ bread = $cr.html; h1 = (Esc $g.titulo); meta = ('Actualizado el <time datetime="' + $g.fecha + '">' + (FechaLarga $g.fecha) + '</time>'); body = $bodyG }) }
 }

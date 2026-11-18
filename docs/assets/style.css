@@ -225,6 +225,14 @@ tr.hl th { box-shadow: inset 5px 0 0 var(--sun-2); }
 .acc-body { padding: 0 18px 8px; color: var(--muted); }
 .acc-body .formula { color: var(--ink); }
 
+/* tariff comparison block */
+.tarifas { display: flex; gap: 20px; align-items: flex-start; margin: 28px 0; padding: 26px; max-width: 820px; border-radius: 24px; color: #fff; background: linear-gradient(145deg, #2563eb, #1e3a8a); box-shadow: 0 4px 0 #172554, 0 18px 34px rgba(30, 58, 138, .3); }
+.tarifas .emo { flex: none; }
+.tarifas h2 { color: #fff; font-size: 1.35rem; margin-top: 0; }
+.tarifas p { color: #dbeafe; }
+.tarifas .btn { margin-top: 4px; }
+.tarifas .note { margin-bottom: 0; font-size: .78rem; color: #bfdbfe; }
+@media (max-width: 560px) { .tarifas { flex-direction: column; padding: 20px; } .tarifas .btn { width: 100%; justify-content: center; } }
 /* affiliate product grid */
 .tienda .note { margin-top: 14px; font-size: .78rem; }
 .prod { background: linear-gradient(160deg, #fffdf3, #fff7d6); border-color: #fde68a; }
