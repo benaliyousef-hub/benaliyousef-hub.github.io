@@ -819,5 +819,27 @@
       { "q": "¿Cuánto gasta una olla lenta en 8 horas?", "a": "Una olla mediana de unos 200 W consume entre 0,8 y 1,6 kWh en ocho horas, según el nivel elegido y lo que el termostato pare la resistencia. Una olla grande en nivel alto puede acercarse a 2 kWh." },
       { "q": "¿Gasta más la olla lenta que la vitrocerámica?", "a": "Por hora gasta mucho menos: unos 200 W frente a 1.000 o 2.000 W de un fuego. En un guiso largo el total puede ser parecido, pero la olla lenta suele salir igual o algo mejor que una cazuela al fuego durante horas, y peor que una olla a presión." }
     ]
+  },
+  {
+    "slug": "humidificador", "art": "un", "nombre": "humidificador", "cat": "climatizacion", "modo": "potencia",
+    "emoji": "💧",
+    "wMin": 20, "wTyp": 30, "wMax": 300, "factor": 0.8, "horas": 8, "dias": 150,
+    "fecha": "2026-11-19",
+    "compra": "humidificador ultrasónico",
+    "intro": "Un humidificador ultrasónico, el tipo más vendido para casa, consume entre 20 y 40 W porque solo hace vibrar el agua para convertirla en niebla fría. Los de vapor caliente hierven el agua con una resistencia y suben a 150 o 300 W, unas diez veces más.",
+    "factores": [
+      "La tecnología: ultrasónico de 20 a 40 W, evaporativo con ventilador de 30 a 80 W y de vapor caliente de 150 a 400 W.",
+      "El nivel de humedad marcado: con humidistato el aparato baja la salida o se para al llegar al objetivo.",
+      "Las horas de uso, que en invierno suelen ser toda la noche con la calefacción encendida."
+    ],
+    "consejos": [
+      "Marca entre el 40 y el 50 % de humedad; por encima no ganas confort y favoreces moho y condensación en ventanas.",
+      "Si buscas bajo consumo, elige uno ultrasónico y usa agua destilada o de baja mineralización para evitar el polvo blanco.",
+      "Úsalo con la puerta cerrada en la habitación que ocupas, en vez de intentar humidificar toda la casa."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un humidificador encendido toda la noche?", "a": "Un ultrasónico de 30 W consume unos 0,24 kWh en ocho horas, menos que una bombilla antigua en el mismo tiempo. Uno de vapor caliente de 300 W gasta unos 2,4 kWh en esas ocho horas." },
+      { "q": "¿Qué gasta más, un humidificador o un deshumidificador?", "a": "Gasta bastante más el deshumidificador: los de compresor tienen entre 200 y 700 W, frente a los 20 a 40 W de un humidificador ultrasónico. Solo los humidificadores de vapor caliente se acercan a esas potencias." }
+    ]
   }
 ]
