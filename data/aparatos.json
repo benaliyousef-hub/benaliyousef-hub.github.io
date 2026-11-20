@@ -841,5 +841,35 @@
       { "q": "¿Cuánto gasta un humidificador encendido toda la noche?", "a": "Un ultrasónico de 30 W consume unos 0,24 kWh en ocho horas, menos que una bombilla antigua en el mismo tiempo. Uno de vapor caliente de 300 W gasta unos 2,4 kWh en esas ocho horas." },
       { "q": "¿Qué gasta más, un humidificador o un deshumidificador?", "a": "Gasta bastante más el deshumidificador: los de compresor tienen entre 200 y 700 W, frente a los 20 a 40 W de un humidificador ultrasónico. Solo los humidificadores de vapor caliente se acercan a esas potencias." }
     ]
+  },
+  {
+    "slug": "robot-de-cocina",
+    "art": "un",
+    "nombre": "robot de cocina",
+    "cat": "cocina",
+    "modo": "ciclo",
+    "emoji": "🍲",
+    "kwhMin": 0.1,
+    "kwhTyp": 0.3,
+    "kwhMax": 0.6,
+    "usos": 5,
+    "dias": 365,
+    "fecha": "2026-11-20",
+    "compra": "robot de cocina con función de cocción",
+    "intro": "Un robot de cocina con calentamiento suma una resistencia de unos 1.000 W y un motor de 500 a 800 W, pero casi nunca trabajan los dos a tope a la vez. Una receta normal, como una crema de verduras o un guiso de media hora, consume entre 0,2 y 0,4 kWh.",
+    "factores": [
+      "El tiempo de cocción con temperatura: la resistencia es la que más gasta y, una vez alcanzada la temperatura, se enciende y se apaga para mantenerla.",
+      "La velocidad del motor: triturar o amasar a velocidad alta pide más potencia, pero suele durar solo unos minutos.",
+      "La cantidad de agua o ingredientes fríos que hay que calentar desde el principio."
+    ],
+    "consejos": [
+      "Empieza con agua caliente del grifo o del hervidor cuando la receta parte de hervir líquido; acortas el tiempo de calentamiento.",
+      "Pon la tapa y el cubilete siempre que la receta lo permita para no perder calor y vapor.",
+      "Aprovecha el cestillo o la bandeja de vapor para cocinar dos cosas en el mismo ciclo en lugar de encender otro aparato."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un robot de cocina por hora?", "a": "Si calienta y remueve sin parar, entre 0,5 y 1 kWh por hora, ya que la resistencia de 1.000 W no está encendida todo el tiempo. Solo triturando, sin calentar, el gasto baja a unos 0,25 kWh por hora." },
+      { "q": "¿Gasta más un robot de cocina que la vitrocerámica?", "a": "Para guisos y cremas de una olla suele gastar menos, porque su resistencia es de unos 1.000 W y calienta un vaso pequeño y cerrado, mientras que un fuego de vitrocerámica tiene entre 1.200 y 2.000 W y pierde calor por los lados del recipiente." }
+    ]
   }
 ]
