@@ -901,5 +901,26 @@
       { "q": "¿Cuánto gasta cargar un coche eléctrico al mes?", "a": "Con unos 1.000 km al mes y un consumo de 17 kWh cada 100 km, el coche necesita unos 170 kWh, que con las pérdidas de la carga en un wallbox se quedan en 180 a 190 kWh tomados de la red. Si recorres 500 km al mes, la cifra baja a la mitad." },
       { "q": "¿Cuántos kWh hacen falta para cargar del todo un coche eléctrico?", "a": "Depende de la batería: un utilitario tiene entre 40 y 60 kWh útiles y un SUV o una berlina, entre 60 y 80 kWh. Pasar del 20 al 80 %, que es lo habitual, pide el 60 % de esa capacidad más un 5 a 10 % de pérdidas: unos 30 kWh en una batería de 50 kWh." }
     ]
+  },
+  {
+    "slug": "ventilador-de-techo", "art": "un", "nombre": "ventilador de techo", "cat": "climatizacion", "modo": "potencia",
+    "emoji": "🌀",
+    "wMin": 15, "wTyp": 40, "wMax": 75, "factor": 1, "horas": 8, "dias": 100, "fecha": "2026-11-21",
+    "compra": "ventilador de techo motor DC bajo consumo",
+    "intro": "Un ventilador de techo consume entre 15 y 75 W según el motor y la velocidad. Los modelos con motor de corriente continua (DC) se quedan en 15 a 35 W, y los de motor clásico de alterna (AC) suelen ir de 50 a 75 W. Incluso en la velocidad máxima gasta decenas de veces menos que un aire acondicionado.",
+    "factores": [
+      "El tipo de motor: un motor DC gasta aproximadamente la mitad que uno AC moviendo el mismo aire.",
+      "La velocidad elegida: en la posición más baja el consumo puede bajar a la mitad o menos que en la más alta.",
+      "La luz integrada: si lleva lámpara, súmala; con LED son unos 15 a 25 W más, con bombillas antiguas bastante más."
+    ],
+    "consejos": [
+      "Elige un modelo con motor DC si vas a usarlo muchas horas: consume menos y suele ser más silencioso.",
+      "En verano, haz que gire en el sentido que empuja el aire hacia abajo; en invierno, invierte el giro a baja velocidad para bajar el aire caliente que se acumula en el techo.",
+      "Úsalo junto al aire acondicionado: la sensación de frescor permite subir el termostato uno o dos grados, que es donde está el ahorro de verdad."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un ventilador de techo encendido toda la noche?", "a": "Ocho horas con un ventilador de techo de 40 W son 0,32 kWh. Con un modelo DC de 20 W, la mitad: 0,16 kWh por noche." },
+      { "q": "¿Gasta más un ventilador de techo o un aire acondicionado?", "a": "El aire acondicionado, con mucha diferencia. Un split corriente consume alrededor de 1.000 W cuando enfría y un ventilador de techo unos 40 W, es decir, unas 25 veces menos. El ventilador no baja la temperatura, pero refresca a quien está debajo." }
+    ]
   }
 ]
