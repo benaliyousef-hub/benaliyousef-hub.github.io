@@ -871,5 +871,35 @@
       { "q": "¿Cuánto gasta un robot de cocina por hora?", "a": "Si calienta y remueve sin parar, entre 0,5 y 1 kWh por hora, ya que la resistencia de 1.000 W no está encendida todo el tiempo. Solo triturando, sin calentar, el gasto baja a unos 0,25 kWh por hora." },
       { "q": "¿Gasta más un robot de cocina que la vitrocerámica?", "a": "Para guisos y cremas de una olla suele gastar menos, porque su resistencia es de unos 1.000 W y calienta un vaso pequeño y cerrado, mientras que un fuego de vitrocerámica tiene entre 1.200 y 2.000 W y pierde calor por los lados del recipiente." }
     ]
+  },
+  {
+    "slug": "cargador-de-coche-electrico",
+    "art": "un",
+    "nombre": "cargador de coche eléctrico",
+    "cat": "exterior",
+    "modo": "ciclo",
+    "emoji": "🔌",
+    "kwhMin": 5,
+    "kwhTyp": 15,
+    "kwhMax": 40,
+    "usos": 3,
+    "dias": 365,
+    "fecha": "2026-11-21",
+    "compra": "cargador wallbox para coche eléctrico 7,4 kW",
+    "intro": "Un cargador doméstico no gasta por sí mismo: lo que consume es la energía que mete en la batería del coche, más las pérdidas de la carga. Un turismo eléctrico corriente recorre unos 100 km con 15 a 18 kWh, así que una recarga de uso diario de 80 o 90 km pide unos 15 kWh de la red, y llenar media batería grande puede pasar de 35 kWh.",
+    "factores": [
+      "Los kilómetros que haces: cada 100 km son entre 15 y 18 kWh en ciudad y carretera mixta, y de 20 a 25 kWh si vas mucho por autopista a 120 km/h.",
+      "El tipo de carga: un wallbox pierde entre un 5 y un 10 % de la energía, mientras que un enchufe doméstico normal, más lento, puede perder del 10 al 30 %.",
+      "El frío: en invierno la calefacción y la batería fría suben el consumo por kilómetro, y parte de la carga se va en templar la batería."
+    ],
+    "consejos": [
+      "Programa la carga en las horas valle de tu tarifa; casi todos los wallbox y coches permiten fijar la hora de inicio.",
+      "Si cargas a menudo, un wallbox desperdicia menos energía que el enchufe normal del garaje, además de cargar unas tres veces más rápido.",
+      "En invierno, preclimatiza el coche mientras sigue enchufado: la energía para calentar el habitáculo sale de la red y no de la batería."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta cargar un coche eléctrico al mes?", "a": "Con unos 1.000 km al mes y un consumo de 17 kWh cada 100 km, el coche necesita unos 170 kWh, que con las pérdidas de la carga en un wallbox se quedan en 180 a 190 kWh tomados de la red. Si recorres 500 km al mes, la cifra baja a la mitad." },
+      { "q": "¿Cuántos kWh hacen falta para cargar del todo un coche eléctrico?", "a": "Depende de la batería: un utilitario tiene entre 40 y 60 kWh útiles y un SUV o una berlina, entre 60 y 80 kWh. Pasar del 20 al 80 %, que es lo habitual, pide el 60 % de esa capacidad más un 5 a 10 % de pérdidas: unos 30 kWh en una batería de 50 kWh." }
+    ]
   }
 ]
