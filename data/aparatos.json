@@ -81,7 +81,7 @@
   },
   {
     "slug": "deshumidificador", "art": "un", "nombre": "deshumidificador", "cat": "climatizacion", "modo": "potencia",
-    "wMin": 200, "wTyp": 350, "wMax": 700, "factor": 0.7, "horas": 8, "dias": 150, "fecha": "2026-11-12",
+    "wMin": 200, "wTyp": 350, "wMax": 700, "factor": 0.7, "horas": 8, "dias": 150, "fecha": "2026-11-21",
     "compra": "deshumidificador bajo consumo",
     "intro": "Un deshumidificador de compresor para casa consume entre 200 y 700 W según los litros que extrae al día. Lleva un sensor de humedad que para el compresor al llegar al nivel marcado, así que no trabaja todas las horas que está enchufado.",
     "factores": [
@@ -95,6 +95,7 @@
       "Vacía el depósito y limpia el filtro a menudo para que no pierda rendimiento."
     ],
     "faq": [
+      { "q": "¿Cuánto consume un deshumidificador al día?", "a": "Uno de 350 W encendido 8 horas, con el compresor trabajando alrededor del 70 % del tiempo, gasta unos 2 kWh al día. Si lo dejas funcionando las 24 horas, unos 5,9 kWh. Los pequeños de tipo Peltier, de 20 a 60 W, gastan mucho menos pero también secan mucho menos." },
       { "q": "¿Sirve un deshumidificador para secar la ropa?", "a": "Sí, y suele gastar menos que una secadora de condensación, aunque tarda más. Funciona mejor en una habitación pequeña y cerrada con la ropa bien tendida." },
       { "q": "¿Cuántas horas al día hay que tenerlo encendido?", "a": "Las que marque el humidistato. Lo habitual es dejarlo en automático: al principio trabaja muchas horas y después solo arranca cuando la humedad vuelve a subir." }
     ]
@@ -121,7 +122,7 @@
   },
   {
     "slug": "manta-electrica", "art": "una", "nombre": "manta eléctrica", "cat": "climatizacion", "modo": "potencia",
-    "wMin": 50, "wTyp": 100, "wMax": 150, "factor": 0.5, "horas": 4, "dias": 120, "fecha": "2026-11-12",
+    "wMin": 50, "wTyp": 100, "wMax": 150, "factor": 0.5, "horas": 4, "dias": 120, "fecha": "2026-11-21",
     "compra": "manta eléctrica con temporizador",
     "intro": "Una manta eléctrica consume entre 50 y 150 W, una fracción de lo que pide cualquier calefacción. Calienta a la persona y no el aire de la habitación, por eso es una de las formas más baratas de combatir el frío.",
     "factores": [
@@ -135,6 +136,7 @@
       "Elige un modelo con temporizador de apagado: ahorra y es más seguro."
     ],
     "faq": [
+      { "q": "¿Cuántos vatios consume una manta eléctrica?", "a": "Entre 50 y 150 W a la temperatura máxima. Con el mando en una posición media, el termostato la mantiene encendida más o menos la mitad del tiempo, así que una manta de 100 W usada 4 horas gasta unos 0,2 kWh." },
       { "q": "¿Gasta mucho una manta eléctrica toda la noche?", "a": "Muy poco. Ocho horas a nivel medio son alrededor de 0,4 kWh, unos céntimos. Aun así, por seguridad y comodidad es mejor usar el temporizador." },
       { "q": "¿Compensa frente a encender la calefacción?", "a": "Si lo que quieres es estar caliente tú y no toda la casa, sí: consume unas veinte veces menos que un calefactor de 2.000 W." }
     ]
@@ -321,7 +323,7 @@
   },
   {
     "slug": "hervidor-de-agua", "art": "un", "nombre": "hervidor de agua", "cat": "cocina", "modo": "potencia",
-    "wMin": 1500, "wTyp": 2200, "wMax": 3000, "factor": 1, "horas": 0.1, "dias": 365, "fecha": "2026-11-12",
+    "wMin": 1500, "wTyp": 2200, "wMax": 3000, "factor": 1, "horas": 0.1, "dias": 365, "fecha": "2026-11-21",
     "compra": "hervidor de agua con selector de temperatura",
     "intro": "Un hervidor eléctrico tiene entre 1.500 y 3.000 W y es la forma más eficiente de calentar agua en casa: casi toda la electricidad va directa al agua. Hervir un litro requiere alrededor de 0,1 kWh.",
     "factores": [
@@ -335,13 +337,14 @@
       "Quita la cal de vez en cuando con vinagre o ácido cítrico."
     ],
     "faq": [
+      { "q": "¿Cuánto gasta un hervidor de agua cada vez que lo usas?", "a": "Llevar a ebullición un litro de agua del grifo pide alrededor de 0,1 kWh. Un hervidor de 2.200 W lo consigue en unos 3 minutos; medio litro gasta aproximadamente la mitad." },
       { "q": "¿Es más barato hervir agua en el hervidor que en la vitrocerámica?", "a": "Sí. El hervidor aprovecha casi toda la energía, mientras que en una vitrocerámica una parte importante se pierde calentando la placa, el recipiente y el aire." },
       { "q": "¿Un hervidor de más potencia gasta más?", "a": "No para la misma cantidad de agua. Uno de 3.000 W consume más por segundo pero termina antes, así que los kWh por litro son prácticamente los mismos." }
     ]
   },
   {
     "slug": "tostadora", "art": "una", "nombre": "tostadora", "cat": "cocina", "modo": "potencia",
-    "wMin": 700, "wTyp": 900, "wMax": 1500, "factor": 1, "horas": 0.08, "dias": 365, "fecha": "2026-11-12",
+    "wMin": 700, "wTyp": 900, "wMax": 1500, "factor": 1, "horas": 0.08, "dias": 365, "fecha": "2026-11-21",
     "compra": "tostadora 2 ranuras",
     "intro": "Una tostadora consume entre 700 y 1.500 W durante los dos o tres minutos que tarda cada tanda. Usada a diario, apenas llega a unos pocos kWh en todo el año.",
     "factores": [
@@ -355,6 +358,7 @@
       "Vacía la bandeja de migas para que caliente de forma uniforme."
     ],
     "faq": [
+      { "q": "¿Cuántos vatios consume una tostadora?", "a": "Entre 700 y 1.500 W. Las de dos ranuras más habituales rondan los 800 a 1.000 W. Unas tostadas de 3 minutos en una tostadora de 900 W gastan unos 0,045 kWh." },
       { "q": "¿Cuánto cuesta hacer unas tostadas?", "a": "Una tanda de tres minutos con una tostadora de 900 W son unos 0,045 kWh: menos de un céntimo." },
       { "q": "¿Gasta menos una sartén que la tostadora?", "a": "No. Calentar una zona de la placa y la sartén para dos rebanadas consume más que la tostadora, que concentra el calor en el pan." }
     ]
@@ -583,7 +587,7 @@
   },
   {
     "slug": "bombilla-led", "art": "una", "nombre": "bombilla LED", "cat": "electronica", "modo": "potencia",
-    "wMin": 5, "wTyp": 9, "wMax": 15, "factor": 1, "horas": 5, "dias": 365, "fecha": "2026-11-12",
+    "wMin": 5, "wTyp": 9, "wMax": 15, "factor": 1, "horas": 5, "dias": 365, "fecha": "2026-11-21",
     "compra": "bombillas LED E27 pack",
     "intro": "Una bombilla LED de 9 W da la misma luz que una incandescente antigua de 60 W. Encendida cinco horas al día, cuesta unos pocos euros al año; lo que cuenta es cuántas tienes y cuántas se quedan encendidas sin necesidad.",
     "factores": [
@@ -597,6 +601,7 @@
       "En pasillos y trasteros, un detector de presencia evita los olvidos."
     ],
     "faq": [
+      { "q": "¿Cuántos watts consume una bombilla LED?", "a": "Las de uso doméstico, entre 5 y 15 W. Una LED de unos 9 W da una luz parecida a la de una incandescente de 60 W. Encendida 5 horas al día gasta 0,045 kWh diarios, unos 16 kWh al año." },
       { "q": "¿Cuánto ahorra una bombilla LED frente a una halógena?", "a": "En torno a un 80 %. Un foco halógeno de 50 W se sustituye por un LED de 5 a 7 W que da una luz equivalente." },
       { "q": "¿Gasta más encender y apagar la luz que dejarla encendida?", "a": "No con los LED. El pico de arranque es insignificante, así que apagar siempre ahorra, aunque sea por poco tiempo." }
     ]

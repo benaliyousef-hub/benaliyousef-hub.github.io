@@ -225,6 +225,11 @@ tr.hl th { box-shadow: inset 5px 0 0 var(--sun-2); }
 .acc-body { padding: 0 18px 8px; color: var(--muted); }
 .acc-body .formula { color: var(--ink); }
 
+/* top affiliate button */
+.buy-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 4px 0 18px; }
+.buy-top .btn { font-size: .95rem; min-height: 46px; padding: 0 20px; }
+.buy-top small { color: var(--muted); font-size: .75rem; }
+@media (max-width: 560px) { .buy-top .btn { width: 100%; justify-content: center; text-align: center; } }
 /* tariff comparison block */
 .tarifas { display: flex; gap: 20px; align-items: flex-start; margin: 28px 0; padding: 26px; max-width: 820px; border-radius: 24px; color: #fff; background: linear-gradient(145deg, #2563eb, #1e3a8a); box-shadow: 0 4px 0 #172554, 0 18px 34px rgba(30, 58, 138, .3); }
 .tarifas .emo { flex: none; }

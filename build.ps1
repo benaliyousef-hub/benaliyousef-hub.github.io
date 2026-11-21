@@ -259,7 +259,8 @@ foreach ($a in $aparatos) {
   }
   $factores = ''; foreach ($x in $a.factores) { $factores += '<li>' + (Esc $x) + '</li>' }
   $consejos = ''; foreach ($x in $a.consejos) { $consejos += '<li>' + (Esc $x) + '</li>' }
-  $amazon = ''
+  $amazon = ''; $amazonTop = ''
+  if ($amzTag) { $amazonTop = '<p class="buy-top"><a class="btn" rel="sponsored nofollow noopener" target="_blank" href="https://www.amazon.es/s?k=' + [uri]::EscapeDataString([string]$a.compra) + '&amp;tag=' + $amzTag + '">&#128722; ' + (Esc (T 'amazonTop' @{ nombre = $a.nombre })) + '</a><small>' + $cfg.textos.amazonTopNota + '</small></p>' }
   if ($amzTag) {
     $amazon = Tienda $cat.slug (Prod (Emo $a) (T 'tiendaAparatoT' @{ nombre = $a.nombre }) ([string]$cfg.textos.tiendaAparatoS) ([string]$a.compra))
   }
@@ -269,14 +270,15 @@ foreach ($a in $aparatos) {
   foreach ($o in @($aparatos | Where-Object { $_.cat -eq $a.cat -and $_.slug -ne $a.slug } | Select-Object -First 6)) { $rel += (Card $o) }
   $cr = Crumbs @(@{ n = 'Inicio'; u = '/' }, @{ n = 'Aparatos'; u = '/cuanto-gasta/' }, @{ n = $cat.nombre; u = '/categoria/' + $cat.slug + '/' }, @{ n = (Cap $a.nombre) })
   $h1 = T 'h1Aparato' $base
-  $title = T 'tituloAparato' $base
+  if ($isC) { $base.rango = (Kwh $a.kwhMin) + ' y ' + (Kwh $a.kwhMax) + ' kWh por uso'; $title = T 'tituloAparatoCiclo' $base }
+  else { $base.rango = (N $a.wMin 0) + ' y ' + (N $a.wMax 0) + ' W'; $title = T 'tituloAparato' $base }
   $desc = T 'descAparato' $base
   $url = $site + '/cuanto-gasta/' + $a.slug + '/'
   $content = Fill $tplAparato @{
     bread = $cr.html; catSlug = $cat.slug; catNombre = (Esc $cat.nombre); h1 = (Esc $h1); respuesta = $respuesta
     fechaIso = $a.fecha; fecha = (FechaLarga $a.fecha); calc = (CalcHtml $a ''); nombreCap = (Esc (Cap $a.nombre)); nombre = (Esc $a.nombre)
     colPot = $colPot; unidad = $unidad; tabla = $tabla; nota = $nota; intro = (Esc $a.intro); factores = $factores
-    formula = $formula; cargaNota = $cargaNota; consejos = $consejos; amazon = $amazon; tarifas = (Tarifas); faq = (FaqHtml $a.faq); relacionados = $rel; medidor = $medidor; catIcon = (Icon $cat.slug); emoji = (Emo $a); art = $a.art
+    formula = $formula; cargaNota = $cargaNota; consejos = $consejos; amazon = $amazon; amazonTop = $amazonTop; tarifas = (Tarifas); faq = (FaqHtml $a.faq); relacionados = $rel; medidor = $medidor; catIcon = (Icon $cat.slug); emoji = (Emo $a); art = $a.art
     stats = ('<div class="stat"><span>' + $(if ($isC) { 'Por uso' } else { 'Por hora' }) + '</span><strong>' + (Eur $ty.unit) + ' &euro;</strong><small>' + $ty.pot + '</small></div><div class="stat"><span>Al mes</span><strong>' + (Eur $ty.eurMes) + ' &euro;</strong><small>' + (Kwh ($ty.kwhDia * 30)) + ' kWh</small></div><div class="stat top"><span>Al a&ntilde;o</span><strong>' + (Eur $ty.eurAno) + ' &euro;</strong><small>' + (Kwh $ty.kwhAno) + ' kWh</small></div>')
   }
   Render @{ rel = "cuanto-gasta\$($a.slug)\index.html"; title = $title; rawTitle = $true; desc = $desc; content = $content; lastmod = $a.fecha
