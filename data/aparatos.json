@@ -927,5 +927,36 @@
       { "q": "¿Cuánto gasta un ventilador de techo encendido toda la noche?", "a": "Ocho horas con un ventilador de techo de 40 W son 0,32 kWh. Con un modelo DC de 20 W, la mitad: 0,16 kWh por noche." },
       { "q": "¿Gasta más un ventilador de techo o un aire acondicionado?", "a": "El aire acondicionado, con mucha diferencia. Un split corriente consume alrededor de 1.000 W cuando enfría y un ventilador de techo unos 40 W, es decir, unas 25 veces menos. El ventilador no baja la temperatura, pero refresca a quien está debajo." }
     ]
+  },
+  {
+    "slug": "bomba-de-calor",
+    "art": "una",
+    "nombre": "bomba de calor",
+    "cat": "climatizacion",
+    "modo": "potencia",
+    "emoji": "♨️",
+    "wMin": 300,
+    "wTyp": 900,
+    "wMax": 1500,
+    "factor": 0.6,
+    "horas": 5,
+    "dias": 120,
+    "fecha": "2026-11-22",
+    "compra": "aire acondicionado con bomba de calor inverter",
+    "intro": "Una bomba de calor aire-aire, el split de aire acondicionado puesto en modo calor, absorbe entre 300 y 1.500 W eléctricos en un equipo doméstico de 2,5 a 3,5 kW. Por cada kWh de electricidad entrega entre 2 y 4 kWh de calor, porque lo toma del aire exterior en lugar de fabricarlo con una resistencia. Esta página trata los splits de pared; la aerotermia que calienta radiadores o suelo radiante es otro equipo, más grande.",
+    "factores": [
+      "La temperatura exterior: con heladas el rendimiento baja y el equipo necesita más electricidad para dar el mismo calor, además de gastar algo en los ciclos de desescarche.",
+      "La diferencia entre la temperatura que pides y la que hay: arrancar una casa fría obliga al compresor a ir a plena potencia durante la primera media hora o más.",
+      "La eficiencia del modelo: un SCOP de 4 o más, que aparece en la etiqueta energética como clase A+ o superior en calefacción, gasta bastante menos que un equipo antiguo de rango 2,5 a 3."
+    ],
+    "consejos": [
+      "Programa una temperatura fija entre 19 y 21 grados y deja que el inverter la mantenga a bajo régimen; encender y apagar a menudo obliga a recalentar desde cero.",
+      "Limpia los filtros de la unidad interior cada pocas semanas en invierno: con polvo pasa menos aire y el compresor trabaja más tiempo.",
+      "Deja libre la unidad exterior, sin toldos que la tapen ni objetos delante, para que pueda tomar calor del aire y expulsar el agua del desescarche."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta una bomba de calor por hora?", "a": "Un split de 3,5 kW en modo calor absorbe unos 0,9 kWh por hora a plena marcha. Cuando la habitación ya está caliente el inverter baja el ritmo y el consumo cae a 0,3 o 0,5 kWh por hora, así que la media de una tarde de uso ronda los 0,5 kWh por hora." },
+      { "q": "¿Gasta menos una bomba de calor que un radiador eléctrico?", "a": "Sí. Un radiador o un calefactor convierte cada kWh en un kWh de calor, mientras que la bomba de calor entrega entre 2 y 4. Para calentar la misma habitación consume entre la mitad y una cuarta parte de electricidad que un aparato de resistencia de 2.000 W." }
+    ]
   }
 ]
