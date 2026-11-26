@@ -958,5 +958,36 @@
       { "q": "¿Cuánto gasta una bomba de calor por hora?", "a": "Un split de 3,5 kW en modo calor absorbe unos 0,9 kWh por hora a plena marcha. Cuando la habitación ya está caliente el inverter baja el ritmo y el consumo cae a 0,3 o 0,5 kWh por hora, así que la media de una tarde de uso ronda los 0,5 kWh por hora." },
       { "q": "¿Gasta menos una bomba de calor que un radiador eléctrico?", "a": "Sí. Un radiador o un calefactor convierte cada kWh en un kWh de calor, mientras que la bomba de calor entrega entre 2 y 4. Para calentar la misma habitación consume entre la mitad y una cuarta parte de electricidad que un aparato de resistencia de 2.000 W." }
     ]
+  },
+  {
+    "slug": "tendedero-electrico",
+    "art": "un",
+    "nombre": "tendedero eléctrico",
+    "cat": "limpieza",
+    "modo": "potencia",
+    "emoji": "👕",
+    "wMin": 100,
+    "wTyp": 230,
+    "wMax": 300,
+    "factor": 1,
+    "horas": 5,
+    "dias": 90,
+    "fecha": "2026-11-26",
+    "compra": "tendedero eléctrico de varillas calefactadas",
+    "intro": "Un tendedero eléctrico es un tendedero plegable con varillas de aluminio que se calientan por dentro hasta unos 50 o 55 grados. Los modelos domésticos corrientes tienen entre 100 y 300 W, bastante menos que un secador de pelo, pero se dejan encendidos varias horas por colada. Los secadores portátiles con funda y ventilador de 1.000 W o más son otro aparato y gastan bastante más.",
+    "factores": [
+      "La potencia del modelo: uno sencillo de una altura ronda los 100 a 230 W y uno de tres alturas con más varillas llega a unos 300 W.",
+      "Las horas por colada: la ropa fina se seca en 3 o 4 horas y las toallas o los vaqueros pueden pedir 6 u 8, y la mayoría no tiene termostato, así que consume toda su potencia mientras está encendido.",
+      "Lo escurrida que salga la ropa y la humedad de la habitación: con un centrifugado flojo o en un cuarto cerrado y frío el secado se alarga."
+    ],
+    "consejos": [
+      "Centrifuga a 1.000 o 1.200 revoluciones antes de tender: cada litro de agua que no sale en la lavadora tiene que evaporarlo el tendedero.",
+      "Tiende las prendas estiradas y separadas, sin doblarlas en varias capas, y dales la vuelta a mitad de secado.",
+      "Usa el temporizador o apágalo en cuanto la ropa esté seca; una funda transpirable acorta el tiempo, pero cúbrelo solo si el fabricante lo permite."
+    ],
+    "faq": [
+      { "q": "¿Cuánto gasta un tendedero eléctrico por hora?", "a": "Lo que marque su potencia: un modelo de 230 W consume 0,23 kWh por hora y uno de 300 W, 0,3 kWh. Una colada de cinco horas en un tendedero de 230 W suma algo más de 1 kWh." },
+      { "q": "¿Gasta más un tendedero eléctrico o una secadora?", "a": "Por hora gasta mucho menos, unos 0,2 o 0,3 kWh frente a los 2 o 2,5 kWh de una secadora de condensación. Por colada suele salir también por debajo, aunque tarda varias horas más y no admite de una vez una carga completa de lavadora." }
+    ]
   }
 ]
