@@ -989,5 +989,41 @@
       { "q": "¿Cuánto gasta un tendedero eléctrico por hora?", "a": "Lo que marque su potencia: un modelo de 230 W consume 0,23 kWh por hora y uno de 300 W, 0,3 kWh. Una colada de cinco horas en un tendedero de 230 W suma algo más de 1 kWh." },
       { "q": "¿Gasta más un tendedero eléctrico o una secadora?", "a": "Por hora gasta mucho menos, unos 0,2 o 0,3 kWh frente a los 2 o 2,5 kWh de una secadora de condensación. Por colada suele salir también por debajo, aunque tarda varias horas más y no admite de una vez una carga completa de lavadora." }
     ]
+  },
+  {
+    "slug": "robot-aspirador",
+    "art": "un",
+    "nombre": "robot aspirador",
+    "cat": "limpieza",
+    "modo": "ciclo",
+    "emoji": "🤖",
+    "kwhMin": 0.05,
+    "kwhTyp": 0.1,
+    "kwhMax": 0.4,
+    "usos": 5,
+    "dias": 365,
+    "fecha": "2026-11-27",
+    "compra": "robot aspirador con base de carga",
+    "intro": "Un robot aspirador trabaja con una batería de unos 40 a 75 Wh y mientras limpia consume entre 20 y 60 W, mucho menos que una aspiradora de cable de 700 W o más. Lo que de verdad cuenta es la recarga en la base después de cada pasada, que ronda los 0,05 a 0,1 kWh. Si la base seca las mopas con aire caliente, ese secado puede gastar más que la propia limpieza.",
+    "factores": [
+      "La capacidad de la batería y la superficie de la casa: un piso pequeño gasta una parte de la carga y una casa grande la agota y obliga a recargar a mitad de limpieza.",
+      "La potencia de succión elegida: el modo máximo o el de alfombras puede doblar el consumo por minuto frente al modo silencioso.",
+      "La estación base: el secado de mopas con calor funciona durante 2 a 4 horas y puede sumar unos 0,3 kWh por limpieza, y el vaciado automático apenas cuenta porque dura unos segundos."
+    ],
+    "consejos": [
+      "Programa la limpieza diaria solo en las zonas de paso y deja la casa entera para dos o tres días por semana.",
+      "Usa la succión normal en suelo duro y reserva el modo máximo para alfombras, que el robot suele detectar solo.",
+      "Si tu base seca las mopas, elige el secado más corto o sin calor cuando la habitación esté ventilada, y ten en cuenta que en reposo la base consume unos pocos vatios todo el día."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuánto gasta un robot aspirador al mes?",
+        "a": "Con una limpieza al día y unos 0,1 kWh por recarga, sale a unos 3 kWh al mes. A eso se suman unos 2 a 5 W de la base en reposo, que en un mes son entre 1,5 y 3,5 kWh, y el secado de mopas con calor si lo tiene."
+      },
+      {
+        "q": "¿Gasta más un robot aspirador o una aspiradora normal?",
+        "a": "Por limpieza gasta menos: una aspiradora de 700 W durante 30 minutos consume 0,35 kWh, frente a unos 0,1 kWh del robot. Pero el robot suele usarse a diario y su base está siempre enchufada, así que al cabo del año los consumos pueden quedar parecidos."
+      }
+    ]
   }
 ]
